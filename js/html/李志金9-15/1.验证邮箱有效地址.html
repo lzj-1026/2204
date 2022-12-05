@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+
+            background-color: rgb(47, 102, 95);
+        }
+
+        div {
+            margin: 50px auto;
+            width: 500px;
+            height: 200px;
+            background-color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        div>span {
+            display: block;
+            margin-top: 50px;
+            color: gray;
+        }
+
+        div>span>input {
+            border: 1px solid gray;
+            border-radius: 5px;
+            text-indent: 2em;
+            width: 250px;
+            height: 30px;
+
+        }
+
+        button {
+            width: 250px;
+            height: 40px;
+            background-color: rgb(90, 156, 247);
+            color: white;
+            letter-spacing: 10px;
+            border: 1px solid rgb(90, 156, 247);
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span> 输入邮箱：<input type="text" id="in1" value="4732111@qq.com"></span>
+        <br>
+        <button onclick="email()">登录</button>
+    </div>
+
+</body>
+
+</html>
+<script>
+    function email() {
+        var a = document.getElementById('in1').value;
+        // var c = [];
+        // for (item of a) {
+        //     // console.log(item);
+        //     c.push(a)
+        //     break
+        // }
+        //   document.write(c)
+        if (a.length == 0) {
+            alert('邮箱不可为空')
+        } else if (a.indexOf('@') == -1 || a.indexOf('.') == -1) {
+            alert('邮箱中缺少.或者@，请重新输入')
+        } else {
+            alert('登录成功');
+            a.value = null;
+        }
+    }
+</script>

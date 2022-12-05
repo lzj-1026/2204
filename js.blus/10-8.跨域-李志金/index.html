@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            width: 400px;
+            margin: 20px auto;
+        }
+
+        ul>li {
+            margin-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #999;
+            list-style: none;
+        }
+
+        li>img {
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        li>p:nth-of-type(1) {
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        button {
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="show()">点击加载</button>
+    <ul>
+        <!-- <li>
+        <p>李志金</p>
+        <img src="../李志金9-22/img/baiduresou.png" alt="">
+        <p> 666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666666</p>
+    </li> -->
+    </ul>
+
+</body>
+
+</html>
+<script>
+    function show() {
+        var ajax_ = new XMLHttpRequest || new ActiveXObject("")
+        ajax_.open('get', './doT.json')
+        ajax_.send()
+        ajax_.onreadystatechange = function () {
+            if (ajax_.readyState === 4) {
+                if (ajax_.status === 200) {
+                    var data = JSON.parse(ajax_.responseText).list;
+                    show_(data);
+                }
+            }
+        }
+    }
+    function show_(data) {
+        var str = ``;
+        for (item of data) {
+            str += `
+                <li>
+    <p>${item.imgtitle}</p>
+    <img src="${item.imgurl}">
+    <p>${item.note}</p>
+                </li>
+`;
+        }
+        var ul_ = document.getElementsByTagName('ul')[0];
+        ul_.innerHTML = str;
+    }
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qq注册</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 800px;
+            height: 600px;
+            padding: 50px;
+            background-color: rgb(249, 253, 255);
+            margin: 50px auto;
+        }
+
+        .bl {
+            display: inline-block;
+            width: 2px;
+            height: 16px;
+            background-color: rgb(86, 166, 212);
+            margin-right: 10px;
+        }
+
+        .box p:nth-of-type(1) {
+            height: 30px;
+            color: gray;
+            border-bottom: 1px solid gray;
+        }
+
+        input {
+            width: 355px;
+            height: 40px;
+            border: 0;
+            text-indent: 1em;
+            overflow: hidden;
+            outline: auto;
+        }
+
+        .a {
+            color: red;
+        }
+
+        a {
+            text-decoration: none;
+            color: pink;
+        }
+
+        a:hover {
+            color: brown;
+        }
+
+        .but {
+            width: 185px;
+            height: 50px;
+            color: white;
+            font-size: 20px;
+            background-color: rgb(182, 2, 14);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p>
+            <span class="bl"></span>
+            <span>注册账号</span>
+        </p>
+        <br>
+        &emsp; &emsp;<span class="a">*</span>昵称：<input type="text" placeholder="英文、数字长度为6-10个字符" maxlength="10"
+            minlength="6"><br><br>
+        &emsp; &emsp;<span class="a">*</span>密码：<input type="password" name="" id="" placeholder="长度为6-16个字符"
+            maxlength="16" minlength="6">
+        <br><br>
+        &nbsp;<span class="a">*</span>手机号码：<input type="text" placeholder="以13]14115/17/18开头七" required><span
+            class="sss2"><a href="#"> &emsp;忘记密码时可用手机号找回密码</a> </span>
+        <br><br>
+        &emsp; &emsp;<span class="a">*</span>邮箱：<input type="text"><br><br>
+        &emsp; &emsp;&nbsp; 年龄：<input type="number" min="1" max="200"><br><br>
+        &emsp; &emsp;&emsp;&emsp;&emsp;&nbsp;<button class="but">立即注册</button>
+
+    </div>
+</body>
+
+</html>

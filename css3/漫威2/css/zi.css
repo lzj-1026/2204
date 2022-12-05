@@ -1,0 +1,300 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background: url(../img/bj1.gif)no-repeat;
+    background-size: 100% 100%;
+}
+
+.box {
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.box1 {
+    width: 80%;
+    height: 300px;
+
+    margin: 20px auto;
+
+    display: flex;
+}
+
+/* h1 */
+h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    transform-style: preserve-3d;
+}
+
+h1>span:nth-of-type(1) {
+    opacity: 0;
+    color: rgb(226, 186, 137);
+    animation: span 1s 1s linear forwards;
+}
+
+h1>span:nth-of-type(2) {
+    opacity: 0;
+    color: bisque;
+    animation: span 1s 2s linear forwards;
+}
+
+h1>span:nth-of-type(3) {
+    opacity: 0;
+    color: rgb(215, 141, 52);
+    animation: span 1s 4s linear forwards;
+}
+
+h1>span:nth-of-type(4) {
+    opacity: 0;
+    color: rgb(225, 176, 116);
+    animation: span 1s 5s linear forwards;
+}
+
+@keyframes span {
+    0% {
+        opacity: 1;
+    }
+
+    10% {
+        opacity: 1;
+
+    }
+
+    20% {
+        opacity: 1;
+
+    }
+
+    30% {
+        opacity: 1;
+
+    }
+
+    40% {
+        opacity: 1;
+
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    60% {
+        opacity: 1;
+
+    }
+
+    70% {
+        opacity: 1;
+
+    }
+
+    80% {
+        opacity: 1;
+
+    }
+
+    90% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+}
+
+/* a标签属性 */
+.box1>a {
+    width: 30%;
+    height: 100%;
+    margin: 0 20px;
+
+}
+
+.box1>a:nth-of-type(1) {
+    opacity: 0;
+    background: url(../img/m3.jpg) no-repeat;
+    background-size: 100%;
+    animation: a1 2s linear forwards;
+}
+
+.box1>a:nth-of-type(2) {
+    opacity: 0;
+    background: url(../img/m1.jpg) no-repeat;
+    background-size: 100%;
+    animation: a1 2s 2s linear forwards;
+}
+
+.box1>a:nth-of-type(3) {
+    opacity: 0;
+    background: url(../img/m5.jpg) no-repeat;
+    background-size: 100%;
+    animation: a1 2s 3s linear forwards;
+}
+
+.box h1 {
+    line-height: 60px;
+    text-align: center;
+}
+
+@keyframes a1 {
+    0% {
+        opacity: 1;
+        transform: translateY(-100px);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(-50px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    75% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.box1>a:nth-of-type(1):hover {
+    background: url(../img/m4.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(2):hover {
+    background: url(../img/m2.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(3):hover {
+    background: url(../img/m6.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* =========文字======== */
+p {
+    text-indent: 2em;
+}
+
+p:nth-of-type(1) {
+    opacity: 0;
+    animation: p 1s 1s linear forwards;
+}
+
+p:nth-of-type(2) {
+    opacity: 0;
+    animation: p 1s 2s linear forwards;
+}
+
+p:nth-of-type(3) {
+    opacity: 0;
+    animation: p 1s 3s linear forwards;
+}
+
+p:nth-of-type(4) {
+    opacity: 0;
+    animation: p 1s 4s linear forwards;
+}
+
+@keyframes p {
+    0% {
+        opacity: 1;
+        transform: translateY(100px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.box>p:nth-of-type(1) {
+    color: #f4e6cb;
+}
+
+.box>p:nth-of-type(2) {
+    color: #6c87d6;
+}
+
+.box>p:nth-of-type(3) {
+    color: #e7cc95;
+}
+
+p>a:nth-of-type(1) {
+    color: yellow;
+    font-size: 20px;
+}
+
+p>a:nth-of-type(2) {
+    font-size: 25px;
+    color: rgb(221, 169, 101);
+}
+
+p>a:nth-of-type(3) {
+    font-size: 25px;
+    color: rgb(39, 123, 234);
+}
+
+p>a:nth-of-type(4) {
+    font-size: 25px;
+    color: rgb(221, 187, 39);
+}
+
+p>a:nth-of-type(5) {
+    font-size: 25px;
+    color: rgb(229, 108, 16);
+}
+
+p>a:nth-of-type(6) {
+    font-size: 25px;
+    color: rgb(206, 13, 145);
+}
+
+p>a:nth-of-type(7) {
+    font-size: 25px;
+    color: rgb(0, 187, 255);
+}
+
+
+p>a:hover {
+    color: red;
+    font-size: 30px;
+    font-weight: 600;
+    animation: aaa 1s linear infinite;
+}
+
+@keyframes aaa {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

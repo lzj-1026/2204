@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="header">
+        <!-- 页眉 -->
+        <div class="nav">
+            <div class="nav-1">
+                送货至：四川
+            </div>
+            <div class="nav-2">
+                <div class="nav-2-1">
+                    你好!请<a href="#" id="aaa">登录</a>
+                    <a href="#">免费注册</a>
+                    |
+                    <a href="#">我的订单</a>
+                    |
+                </div>
+
+                <ul class="nav-2-2" id="ul_">
+                    <li><a href="#">收藏夹</a></li>
+
+                    <li class="xian"><a href="#">客户服务</a>
+                        <span class="nav-2-2-1"></span>
+                        <!--  js 悬浮每一个的时候  给每一个加二级导航 -->
+                        <div class="nav_a">
+                            <ul>
+                                <li><a href="#">包裹跟踪</a></li>
+                                <li><a href="#">常见问题</a></li>
+                                <li><a href="#">在线退款</a></li>
+                                <li><a href="#">在线投诉</a></li>
+                                <li><a href="#">配送范围</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">网站导航</a></li>
+                </ul>
+                <div class="nav-2-3">
+                    |
+                    关注我们：
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+                <div class="nav-2-4">
+                    |
+                    <a href="#">手机版
+                        <span></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!-- 头部 -->
+        <div class="search">
+            <div class="logo">
+                <a href="#"><img src="./img/logo.png" alt=""></a>
+            </div>
+            <!-- 搜索框 -->
+            <div class="seek">
+                <form class="inp">
+                    <input type="text" value="" placeholder="请输入关键字" tabindex="1">
+                    <input type="button" value="搜索">
+                </form>
+                <div class="sk">
+                    <a href="#">咖啡</a>
+                    <a href="#">iphone 6S</a>
+                    <a href="#">新鲜美食</a>
+                    <a href="#">蛋糕</a>
+                    <a href="#">日用品</a>
+                    <a href="#">连衣裙</a>
+                </div>
+
+            </div>
+            <!-- 购物车 -->
+            <div class="cart" onmouseenter="fn()" onmouseleave="fn_()">
+                购物车
+                <div class="inner">
+                    <!-- 商品 -->
+                    <div class="in_co">
+                        <div class="in_s">
+                            <ul id="i_ul">
+                                <li class="in_a">
+                                    <h4 class="in_h">1号店满188-18 <span>共1件</span></h4>
+                                    <div class="s_in">
+                                        <img src="./img/shop1.png" alt="">
+                                        <div class="s_inner">
+                                            <p class="in_ab">宝贝许愿坊 童装女装套装</p>
+                                            <p class="in_b">深蓝 140码</p>
+                                            <div class="er_a">
+                                                <button class="jian">-</button>
+                                                <input type="text" value="1" class="shu">
+                                                <button class="jia">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="remove">
+                                            <p><span class="sc">X</span></p>
+                                            <span class="danjia">190 </span>￥
+                                        </div>
+                                    </div>
+                                    <p class="c_a">参加一项促销，节约成本￥100</p>
+                                </li>
+                                <li class="in_a">
+                                    <h4 class="in_h">1号店满188-18 <span>共1件</span></h4>
+                                    <div class="s_in">
+                                        <img src="./img/shop2.png" alt="">
+                                        <div class="s_inner">
+                                            <p class="in_ab">亨氏 乐维滋清乐2+2果汁</p>
+                                            <p class="in_b">草莓山楂枸杞</p>
+                                            <div class="er_a">
+                                                <button class="jian">-</button>
+                                                <input type="text" value="1" class="shu">
+                                                <button id="jia" class="jia">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="remove">
+                                            <p><span class="sc">X</span></p>
+                                            <span class="danjia">199 </span>￥
+                                        </div>
+                                    </div>
+                                    <p class="c_a">参加一项促销，节约成本￥100</p>
+                                </li>
+                                <li class="in_a">
+                                    <h4 class="in_h">珠韵首饰旗舰店<span>共1件</span></h4>
+                                    <div class="s_in">
+                                        <img src="./img/shop3.png" alt="">
+                                        <div class="s_inner">
+                                            <p class="in_ab">珠韵首饰</p>
+                                            <p class="in_b">淡水珍珠</p>
+                                            <div class="er_a">
+                                                <button class="jian">-</button>
+                                                <input type="text" value="1" class="shu">
+                                                <button class="jia">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="remove">
+                                            <p><span class="sc">X</span></p>
+                                            <span class="danjia">190</span>￥
+                                        </div>
+                                    </div>
+                                    <p class="c_a">参加一项促销，节约成本￥100</p>
+                                </li>
+                            </ul>
+                            <div class="cjs">
+                                <p class="fk"><a href="#">意见反馈</a></p>
+                                <div class="sum">
+                                    <p class="sum_" id="sum">合计 ￥570</p>
+                                    <span class="je" id="je">立即结算（3）</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kong
+                        " style="display: none;">
+                            <img src="./img/icon_tips2.png" alt="">
+                            <h2>您还没有添加任何商品</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容顶部 -->
+    <div class="c_content">
+        <div class="content">
+            <div class="c_top">
+                <span>全部商品分类</span>
+                <ul>
+                    <li><a href="#" class="c_top_a">首页</a></li>
+                    <li><a href="#" class="c_top_a">自营超市</a></li>
+                    <li><a href="#">一号团</a></li>
+                    <li><a href="#">一号超市</a></li>
+                    <li><a href="#">女装</a></li>
+                    <li><a href="#">美妆</a></li>
+                    <li><a href="#">1号海购</a></li>
+                    <li><a href="#">团购</a></li>
+                </ul>
+                <span><a href="#"><img src="./img/phone.png" alt=""></a></span>
+            </div>
+            <!-- 侧边栏 -->
+            <div class="sidebar">
+                <ul id="ul__">
+                    <li class="nnn " onmouseenter="yiru()" onmouseleave="yichu()"><a href="#"><img src="./img/nav1.png"
+                                alt="">进口食品/生鲜</a>
+                        <div class="mb">
+                            111111111111111111111111111111111111111111111111111111111111111111111111111111111
+                        </div>
+                    </li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav2.png"
+                                alt="">食品、饮料、酒</a>
+                        <div class="mb">
+                            22211111111111111111111111111111111111111111111111111111111111111111111111111111
+                        </div>
+                    </li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav3.png"
+                                alt="">母婴、玩具、童装</a>
+                    </li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav4.png"
+                                alt="">家居、家庭清洁、纸品</a>
+                    </li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav5.png"
+                                alt="">美妆、 个人护理、洗护</a>
+                    </li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav6.png"
+                                alt="">女装 个人护理、洗护</a>
+                    </li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav7.png"
+                                alt="">鞋靴、箱包、腕表配饰</a>
+                    </li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav8.png"
+                                alt="">男装、运动</a></li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav9.png"
+                                alt="">手机、小家电、电脑</a>
+                    </li>
+                    <li class="nnn" onmouseenter="yiru()" onmouseleave="yichu()"><a href=" #"><img src="./img/nav10.png"
+                                alt="">礼品、充值</a></li>
+                </ul>
+            </div>
+            <!-- 轮播图 -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/03.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/04.webp" alt=""></div>
+                    <div class="swiper-slide"><img src="./img/05.webp" alt=""></div>
+
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+
+                <!-- 如果需要导航按钮 -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- 如果需要滚动条 -->
+                <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+            <!-- 滚动数据 -->
+            <div class="roll">
+                <div class="r_h">
+                    <span>快讯</span>
+                    <span>更多></span>
+                </div>
+                <div class="r_c">
+                    <ul>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                        <li><span>【特惠】</span><a href="">原价999,现价222</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+            <div class="monry">
+                <h3>1号钱包</h3>
+                <p>收益日结，收益赚High！</p>
+                <img src="./img/oneAD.jpg" alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- 热门区域 -->
+    <div class="hold">
+        <!-- 左 -->
+        <div class="left">
+            <div class="l_i">
+                <img src="./img/l_img.jpg" alt="">
+            </div>
+            <div class="h_z">
+                <span>￥53.00</span>
+                <span>16R</span>
+            </div>
+        </div>
+        <!-- 右 -->
+        <div class="h_r">
+            <ul>
+                <li><a href="#"><img src="./img/hot1.jpg" alt=""></a>
+
+                    <div class="h_r_z">
+                        <a href="#">
+                            <h4>德国进口</h4> 德亚全脂纯牛奶200ml*48盒
+                        </a>
+                    </div>
+                    <p> <span>￥189</span>
+                        26R</p>
+                    <span class="jiantou"></span>
+                    <div class="hot"><img src="./img/./hot.png" alt=""></div>
+                </li>
+                <li><a href="#"><img src="./img/hot2.jpg" alt=""></a>
+                    <div class="h_r_z">
+                        <a href="#">
+                            <h4>iphone 6S</h4>
+                            Apple/苹果 iPhone 6s Plus公开版
+                        </a>
+                    </div>
+                    <p> <span>￥5555</span>
+                        154R</p>
+                    <div class="hot"><img src="./img/./hot.png" alt=""></div>
+                </li>
+                <li><a href="#"><img src="./img/hot3.jpg" alt=""></a>
+                    <div class="h_r_z">
+
+                        <a href="#">
+                            <h4>倩碧特惠组合套装</h4>
+                            倩碧补水组合套装8折促销
+                        </a>
+                    </div>
+                    <p> <span>￥999</span>
+                        26R</p>
+                    <div class="hot"><img src="./img/./hot.png" alt=""></div>
+                </li>
+                <li><a href="#"><img src="./img/hot4.jpg" alt=""></a>
+                    <div class="h_r_z">
+                        <a href="#">
+                            <h4>品利特级橄榄油</h4>
+                            750ml*4瓶装组合 西班牙原装进口
+                        </a>
+                    </div>
+                    <p> <span>￥669</span>
+                        26R</p>
+
+                    <div class="hot"><img src="./img/./hot.png" alt=""></div>
+
+                    <span class="jiantou_"></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="con">
+        <img src="./img/mban_2.jpg" alt="">
+    </div>
+    <!-- 1F -->
+    <div class="one">
+        <!-- 1F顶部 -->
+        <div class="one_t">
+            <span>1F</span>
+            <span>进口.生鲜</span>
+            <ul>
+                <li><a href="#">进口咖啡</a></li>
+                <li><a href="#">进口酒</a></li>
+                <li><a href="#">进口母婴</a></li>
+                <li><a href="#">新鲜蔬菜</a></li>
+                <li><a href="#">新鲜水果</a></li>
+            </ul>
+        </div>
+        <!-- 1F内容 -->
+        <div class="one_c">
+            <div class="one_c_l">
+                <div class="c_l_l">
+                    <img src="./img/fre_r.jpg" alt="">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="c_l_t">
+                    <div class="c_t">
+                        <a href="#">进口水果</a><a href="#">奇异果</a><a href="#">西柚</a><a href="#">海鲜水产</a><a
+                            href="#">品质牛肉</a><a href="#">奶粉</a><a href="#">鲜活禽蛋</a><a href="#">进口酒</a><a
+                            href="#">进口奶粉</a><a href="#">鲜活禽蛋</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 内容 -->
+            <div class="one_c_c">
+                <ul>
+                    <li>
+                        <div class="c_n"><a href="#">贝思客 草莓先生&蓝莓小姐</a></div>
+                        <div class="c_m">
+                            <span>￥98.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/fre_1.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">微笑果园SMILE 智利进口绿奇异果</a></div>
+                        <div class="c_m">
+                            <span>￥84.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/fre_2.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">新鲜美味 进口美食</a></div>
+                        <div class="c_m">
+                            <span>￥98.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/fre_3.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">新鲜美味 进口美食</a></div>
+                        <div class="c_m">
+                            <span>￥24.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/fre_4.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">新鲜美味 纯牛奶</a></div>
+                        <div class="c_m">
+                            <span>￥142.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/fre_5.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">莫斯利安</a></div>
+                        <div class="c_m">
+                            <span>￥62.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/fre_6.jpg"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="one_r">
+                <ul>
+                    <li><a href="#"><img src="./img/fre_b1.jpg"></a></li>
+                    <li><a href="#"><img src="./img/fre_b2.jpg"></a></li>
+
+
+                </ul>
+            </div>
+            <!-- 2F -->
+
+        </div>
+    </div>
+    <!-- 2f -->
+    <div class="one">
+        <!-- 2F顶部 -->
+        <div class="one_t">
+            <span>2F</span>
+            <span>个人美妆</span>
+            <ul>
+                <li><a href="#">洗发护发</a></li>
+                <li><a href="#">面膜</a></li>
+                <li><a href="#">洗面奶</a></li>
+                <li><a href="#">香水</a></li>
+                <li><a href="#">沐浴露</a></li>
+            </ul>
+        </div>
+        <!-- 2F内容 -->
+        <div class="one_c">
+            <div class="one_c_l" id="ff">
+                <div class="c_l_l">
+                    <img src="./img/make_r.jpg" alt="">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="c_l_t c_tt">
+                    <div class="c_t">
+                        <a href="#">洗发护发</a><a href="#">牙刷牙膏</a><a href="#">面膜</a><a href="#">脱毛膏</a><a
+                            href="#">补水面膜</a><a href="#">香水</a><a href="#">面霜</a><a href="#">沐浴露</a><a
+                            href="#">爽肤水</a><a href="#">洗面奶</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 内容 -->
+            <div class="one_c_c">
+                <ul>
+                    <li>
+                        <div class="c_n"><a href="#">美宝莲粉饼</a></div>
+                        <div class="c_m">
+                            <span>￥260.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="./img/make_1.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">洗衣液</a></div>
+                        <div class="c_m">
+                            <span>￥60.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="./img/make_2.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">洗发水</a></div>
+                        <div class="c_m">
+                            <span>￥160.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="./img/make_3.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">男士洗发水</a></div>
+                        <div class="c_m">
+                            <span>￥120.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="./img/make_4.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">花西子蜜粉</a></div>
+                        <div class="c_m">
+                            <span>￥188.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="./img/make_5.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">欧莱雅洗面奶</a></div>
+                        <div class="c_m">
+                            <span>￥90.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="./img/make_6.jpg"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="one_r">
+                <ul>
+                    <li><a href="#"><img src="./img/make_b1.jpg"></a></li>
+                    <li><a href="#"><img src="./img/make_b2.jpg"></a></li>
+
+
+                </ul>
+            </div>
+            <!-- 2F -->
+
+        </div>
+    </div>
+    <div class="con">
+        <img src="./img/mban_2.jpg" alt="">
+    </div>
+    <div class="one">
+        <!-- 3F顶部 -->
+        <div class="one_t">
+            <span>3F</span>
+            <span>母婴玩具</span>
+            <ul>
+                <li><a href="#">营养品</a></li>
+                <li><a href="#">孕妈背带裤</a></li>
+                <li><a href="#">儿童玩具</a></li>
+                <li><a href="#">婴儿床</a></li>
+                <li><a href="#">喂奶器</a></li>
+            </ul>
+        </div>
+        <!-- 3F内容 -->
+        <div class="one_c">
+            <div class="one_c_l" id="fff">
+                <div class="c_l_l">
+                    <img src="./img/baby_r.jpg" alt="">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="c_l_t c_tt">
+                    <div class="c_t ">
+                        <a href="#">奶妈必备</a><a href="#">儿童玩具</a><a href="#">童装童鞋</a><a href="#">辅助食品</a><a
+                            href="#">品质牛肉</a><a href="#">奶粉</a><a href="#">鲜活禽蛋</a><a href="#">维生素</a><a
+                            href="#">进口奶粉</a><a href="#">辅助食品</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 内容 -->
+            <div class="one_c_c">
+                <ul>
+                    <li>
+                        <div class="c_n"><a href="#">儿童推车</a></div>
+                        <div class="c_m">
+                            <span>￥560.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/baby_1.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">奶妈纸尿裤</a></div>
+                        <div class="c_m">
+                            <span>￥260.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/baby_2.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">儿童玩具 挖掘机</a></div>
+                        <div class="c_m">
+                            <span>￥160.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/baby_3.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">纸尿裤</a></div>
+                        <div class="c_m">
+                            <span>￥240.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/baby_4.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">小推车</a></div>
+                        <div class="c_m">
+                            <span>￥122.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/baby_5.jpg"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="c_n"><a href="#">奶粉</a></div>
+                        <div class="c_m">
+                            <span>￥662.00</span>
+                        </div>
+                        <div class="c_i"><a href="#"><img src="img/baby_6.jpg"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="one_r">
+                <ul>
+                    <li><a href="#"><img src="./img/fre_b1.jpg"></a></li>
+                    <li><a href="#"><img src="./img/fre_b2.jpg"></a></li>
+
+
+                </ul>
+            </div>
+            <!-- 2F -->
+
+        </div>
+    </div>
+    <!--底部 -->
+    <div class="footer">
+        <div class="ftop">
+            <ul class="ftop_ul">
+                <li>
+                    <a><img src="./img/b1.png"></a>
+                    <div>
+                        <h2>正品保障</h2>正品行货 放心购买
+                    </div>
+                </li>
+                <li>
+                    <a><img src="./img/b2.png"></a>
+                    <div>
+                        <h2>满38包邮</h2>满38包邮 免运费
+                    </div>
+                </li>
+                <li>
+                    <a><img src="./img/b3.png"></a>
+                    <div>
+                        <h2>天天低价</h2>天天低价 畅选无忧
+                    </div>
+                </li>
+                <li>
+                    <a><img src="./img/b4.png"></a>
+                    <div>
+                        <h2>准时送达</h2>收货时间由你做主
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--底部信息 -->
+        <div class="fit">
+            <dl>
+                <dt><a href=" #">新手上路</a></dt>
+                <dd><a href="#">售后流程</a></dd>
+                <dd><a href="#">购物流程</a></dd>
+                <dd><a href="#">订购方式</a></dd>
+                <dd><a href="#">隐私声明</a></dd>
+                <dd><a href="#">推荐分享说明</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">配送与支付</a></dt>
+                <dd><a href="#">货到付款区域</a></dd>
+                <dd><a href="#">配送支付查询</a></dd>
+                <dd><a href="#">支付方式说明</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">会员中心</a></dt>
+                <dd><a href="#">资金管理</a></dd>
+                <dd><a href="#">我的收藏</a></dd>
+                <dd><a href="#">我的订单</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">服务保证</a></dt>
+                <dd><a href="#">退换货原则</a></dd>
+                <dd><a href="#">售后服务保证</a></dd>
+                <dd><a href="#">产品质量保证</a></dd>
+            </dl>
+            <dl>
+                <dt><a href="#">联系我们</a></dt>
+                <dd><a href="#">网站故障报告</a></dd>
+                <dd><a href="#">购物咨询</a></dd>
+                <dd><a href="#">投诉与建议</a></dd>
+            </dl>
+            <div class="tu_">
+                <div class=" tu_a">
+                    <img src="./img/ewm.png" alt="">
+
+                </div>
+
+            </div>
+            <div class="tu_b">
+                <p> <a href="#">新浪微博</a></p>
+                <p><a href="#">腾讯微博</a></p>
+                <p class="p_z">
+                    服务热线：<br />
+                    <span>400-123-4567</span>
+                </p>
+            </div>
+        </div>
+        <div class="fbt">
+            <div class="copy">
+                备案/许可证编号：蜀ICP备12009302号-1-www.dingguagua.com Copyright© 1号店网上超市 2007-2016，All Rights Reserved.
+                复制必究,Technical Support: Dgg Group
+                <br>
+                <img src="./img/b_1.gif" alt="">
+                <img src="./img/b_2.gif" alt="">
+                <img src="./img/b_3.gif" alt="">
+                <img src="./img/b_4.gif" alt="">
+                <img src="./img/b_5.gif" alt="">
+                <img src="./img/b_6.gif" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
+<script src="./js/index.js"></script>
+<!-- <script src="./js/index.js"></script> -->
+<script src="./js/swiper-bundle.min.js"></script>
+<!-- 轮播图 -->
+<script>
+
+    // 轮播图
+    var mySwiper = new Swiper('.swiper', {
+        direction: 'horizontal', // 水平方向切换
+        loop: true, // 循环模式选项
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // 如果需要前进后退按钮
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        // autoplay: true,//等同于以下设置
+        autoplay: {
+            delay: 1000,
+            //停留最后一个选项 （关掉循环生效）
+            stopOnLastSlide: false,
+            disableOnInteraction: true,
+        }
+        // effect: 'cards',
+
+    })  
+</script>

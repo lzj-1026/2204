@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // #### 15. 一个含有字符串的数组['a', 'b', 'c', 'a', 'g', 'c', 'g'], 需要得到一个新数组
+
+    // ['a1', 'b', 'c1', 'a2', 'g1', 'c2', 'g2']
+    // 要求：未重复出现的元素不处理
+    // 重复出现的元素加编号
+    // 不影响正常数组元素的顺序
+    // var arr = ['a', 'b', 'c', 'a', 'g', 'c', 'g']
+    // for (var i = 0; i < arr.length; i++) {
+    //     for (var j = i + 1; j < arr.length; j++) {
+    //         if (arr[i] === arr[j]) {
+    //             arr[i] += 1
+    //             arr[j] += 2
+    //         }
+    //     }
+    // }
+    // console.log(arr);
+
+    // 16. 判断一个数组中有几个回文字符串: ['level', 'haha', 'hello', 'abcdcba', 'green', 'nan', 'naan']
+    var arr = ['level', 'haha', 'hello', 'abcdcba', 'green', 'nan', 'naan']
+    var index = 0;
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] == arr[i].split('').reverse('').join('')) {
+            console.log(arr[i]);
+            index++;
+        }
+    }
+    console.log(index);
+
+
+</script>

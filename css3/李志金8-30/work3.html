@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 1200px;
+            height: 650px;
+            margin: 40px auto;
+            margin-bottom: 0;
+            overflow: hidden;
+            position: relative;
+            background: url(./img/loginbg.c76fd147.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 400px;
+            position: absolute;
+            bottom: 124px;
+            right: 87px;
+            background: url(./img/loginform.52a0be62.png) no-repeat;
+            background-size: 300px 400px;
+            padding: 0 10px;
+        }
+
+        h2 {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            color: white;
+        }
+
+        form {
+            padding: 0 10px;
+        }
+
+        p {
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid rgb(17, 223, 173);
+            /* padding-left: 40px; */
+        }
+
+        input {
+            border: none;
+            width: 200px;
+            color: pink;
+            background-color: rgb(2, 37, 137);
+            overflow: hidden;
+            outline: none;
+        }
+
+        form label {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0px 10px;
+            background: url(./img/user.png);
+            background-size: 20px;
+            vertical-align: text-top;
+        }
+
+        .p1 label {
+            background: url(./img/message.png) no-repeat 0px 2px;
+            background-size: 20px;
+        }
+
+        .p2 label {
+            background: url(./img/user.png) no-repeat 0px 2px;
+            background-size: 20px;
+        }
+
+        .p3 label {
+            background: url(./img/lock.png) no-repeat 0px 2px;
+            background-size: 20px;
+        }
+
+        button {
+            margin-top: 50px;
+            width: 100%;
+            height: 40px;
+            /* background-image: linear-gradient(#fefffd 0%, #ffa0c7 10%); */
+
+            background: url(./img/login-up.5b38e5e7.png)no-repeat;
+            background-size: 100%;
+            color: white;
+            text-align: center;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <h2>企业管理中心</h2>
+            <form>
+                <p class="p1"> <label for="dd"></label>
+                    <input type="text" id="dd" placeholder="用户编号">
+                </p>
+                <p class="p2"> <label for="da"></label>
+                    <input type="text" id="da" placeholder="邮箱">
+                </p>
+                <p class="p3"> <label for="ds"></label>
+                    <input type="password" id="ds" placeholder="密码">
+                </p>
+                <button>
+                    登录
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

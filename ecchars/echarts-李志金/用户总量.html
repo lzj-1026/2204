@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src="./js/echarts.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #a {
+            width: 600px;
+            height: 400px;
+            margin: 20px auto;
+            padding: 1%;
+            background-color: rgb(254, 241, 223);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a"></div>
+</body>
+
+</html>
+<script>
+    var my = echarts.init(document.getElementById('a'));
+    var item = {
+        name: '',
+        value: 1200,
+        itemStyle: {
+            color: '#254065'
+        },
+        // 鼠标经过柱子颜色
+        emphasis: {
+            itemStyle: {
+                color: '#254065'
+            }
+        },
+        tooltip: {
+            extraCssText: 'opacity:0'
+        }
+
+    }
+    var option = {
+        tooltip: {
+            trigger: 'item',
+        },
+        xAxis: [{
+            type: 'category',
+            data: ['郑州', '', '洛阳', '', '濮阳', '', '……', '', '安阳', '', '南阳', '', '开封'],
+            axisTick: {
+                show: false,
+                alignWithLabel: false
+            },
+            axisLabel: {
+                color: 'rgb(147,229,245)',
+                fontSize: '14'
+            },
+
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLabel: {
+                color: 'rgb(147,229,245)'
+            },
+            splitLine: {
+                lineStyle: {
+                    color: 'skyblue'
+                }
+            }
+        }],
+        grid: {
+            show: true,
+        },
+        color: new echarts.graphic.LinearGradient(
+            0, 0, 0, 1, [{
+                offset: 0,
+                color: '#70F6F7'
+            },
+            {
+                offset: 0.5,
+                color: '#188df0'
+            }, {
+                offset: 1,
+                color: '#2D89CD'
+            }]
+        ),
+
+        series: [{
+            name: '用户量：',
+            type: 'bar',
+            barWidth: '60%',
+            data: [2333, 2111, 1999, 1777, 1555,
+                item, item, item,
+                999, 888, 777, 666, 555],
+        }]
+    };
+    my.setOption(option)
+</script>

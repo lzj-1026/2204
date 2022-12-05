@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mb {
+            width: 100%;
+            height: 3128px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(204, 22, 22, 0.2);
+        }
+
+        .gg {
+            position: absolute;
+            left: 50%;
+            top: 40px;
+            transform: translateX(-50%);
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="div_"></div> -->
+    <img src="./img/KUZGW~TC]QJYI$Y{A6Z9%X4.png" alt="" width="100%">
+    <!-- <img src="./img/J]0BF_L1I4`$ID838H2%$7M.png" alt=""> -->
+</body>
+
+</html>
+<script>
+
+    function time_() {
+        // var body_ = document.getElementsByTagName('body')
+        var div_ = document.createElement('div');
+        div_.className = 'mb';
+
+        var img_ = document.createElement('img');
+        img_.className = 'gg'
+        img_.src = './img/J]0BF_L1I4`$ID838H2%$7M.png'
+
+
+        var body_ = document.body;
+
+        body_.appendChild(div_)
+        body_.appendChild(img_)
+
+        img_.onclick = function () {
+            body_.removeChild(div_)
+            body_.removeChild(img_)
+        }
+
+    }
+    setTimeout(time_, 3000)
+</script>

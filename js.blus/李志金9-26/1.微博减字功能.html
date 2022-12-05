@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="txt" cols="30" rows="10" maxlength="40"></textarea>
+    <p>您还可以输入<span>40</span>字</p>
+</body>
+
+</html>
+<script>
+    var a = document.getElementById('txt')
+    var span = document.querySelector('span')
+    a.onkeyup = function () {
+        var len = a.value.length;
+        span.innerHTML = a.maxLength - len
+        if (span.innerHTML <= 0) {
+            span.innerHTML = 0
+
+        }
+    }
+</script>

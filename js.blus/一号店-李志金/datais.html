@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/pearl.css">
+    <link rel="stylesheet" href="./css/datais.css">
+</head>
+
+<body>
+    <!-- 顶部 -->
+    <div class="header">
+        <!-- 页眉 -->
+        <div class="nav">
+            <div class="nav-1">
+                送货至：四川
+            </div>
+            <div class="nav-2">
+                <div class="nav-2-1">
+                    你好!请<a href="#">登录</a>
+                    <a href="#">免费注册</a>
+                    |
+                    <a href="#">我的订单</a>
+                    |
+                </div>
+
+                <ul class="nav-2-2" id="ul_">
+                    <li><a href="#">收藏夹</a></li>
+
+                    <li><a href="#">客户服务</a>
+                        <span class="nav-2-2-1"></span>
+                        <!--  js 悬浮每一个的时候  给每一个加二级导航 -->
+                        <div class="nav_a">
+                            <ul>
+                                <li><a href="#">包裹跟踪</a></li>
+                                <li><a href="#">常见问题</a></li>
+                                <li><a href="#">在线退款</a></li>
+                                <li><a href="#">在线投诉</a></li>
+                                <li><a href="#">配送范围</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">网站导航</a></li>
+                </ul>
+                <div class="nav-2-3">
+                    |
+                    关注我们：
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+                <div class="nav-2-4">
+                    |
+                    <a href="#">手机版
+                        <span></span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!-- 头部 -->
+        <div class="search">
+            <div class="logo">
+                <a href="#"><img src="./img/logo.png" alt=""></a>
+            </div>
+            <!-- 搜索框 -->
+            <div class="seek">
+                <form class="inp">
+                    <input type="text" value="" placeholder="请输入关键字" tabindex="1">
+                    <input type="button" value="搜索">
+                </form>
+                <div class="sk">
+                    <a href="#">咖啡</a>
+                    <a href="#">iphone 6S</a>
+                    <a href="#">新鲜美食</a>
+                    <a href="#">蛋糕</a>
+                    <a href="#">日用品</a>
+                    <a href="#">连衣裙</a>
+                </div>
+
+            </div>
+            <!-- 购物车 -->
+            <div class="cart">
+                购物车
+            </div>
+        </div>
+    </div>
+    <!-- 内容顶部 -->
+    <div class="c_content">
+        <div class="content">
+            <div class="c_top">
+                <span>全部商品分类</span>
+                <ul>
+                    <li><a href="#" class="c_top_a">首页</a></li>
+                    <li><a href="#" class="c_top_a">自营超市</a></li>
+                    <li><a href="#">一号团</a></li>
+                    <li><a href="#">一号超市</a></li>
+                    <li><a href="#">女装</a></li>
+                    <li><a href="#">美妆</a></li>
+                    <li><a href="#">1号海购</a></li>
+                    <li><a href="#">团购</a></li>
+                </ul>
+                <span><a href="#"><img src="./img/phone.png" alt=""></a></span>
+            </div>
+            <!-- 小导航 -->
+            <div class="c_nav">
+                <span>所有团购>包饰 > 珠宝首饰 ></span>
+                <div class="c_p">
+                    <span><em>冰韵 天然白色正圆S925银扣珍珠项链</em></span>
+                </div>
+            </div>
+            <!-- 图片区域 -->
+            <div class="c_xq">
+                <div class="xq_l">
+                    <!--  大图片 -->
+                    <div class="xq_lt">
+                        <a href="./img/p_big.jpg"><img src="./img/p_big.jpg" alt=""></a>
+                        <div class="xq_ltt">
+                            <span></span>
+                            <span>
+                                <a href="./img/ps1.jpg"><img src="./img/ps1.jpg" alt=""></a>
+                                <a href="./img/ps2.jpg"><img src="./img/ps2.jpg" alt=""></a>
+                                <a href="./img/ps3.jpg"><img src="./img/ps3.jpg" alt=""></a>
+                                <a href="./img/ps4.jpg"><img src="./img/ps4.jpg" alt=""></a>
+                            </span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="xq_con">
+                        <h2>珠韵首饰 冰韵 天然白色正圆S925银扣珍珠项链</h2>
+                        <p><span>全国包邮 送妈妈，正圆级淡水珍珠，白色S925银链扣，使用方便，尊贵礼物.</span></p>
+                        <p>本店价格：￥<span id="money">1786</span></p>
+                        <p>参考价格：￥<span id="money_">3886</span></p>
+                        <p class="con_p">尺码：<span class="ab nb">43cm</span><span class="ab">45cm</span><span
+                                class="ab">50cm</span></p>
+                        <p class="con_p">颜色选择：<span class="dui fo">粉色</span><span class="dui">白色</span></p>
+                        <p class="p_a">
+                            <a href="#" id="block">分享
+                            </a>
+                            <a href="#">关注商品</a>
+                        <div class="tubiao">
+                            <a href="#"><img src="./img/sh_1.gif" alt=""></a>
+                            <a href="#"><img src="./img/sh_2.gif" alt=""></a>
+                            <a href="#"><img src="./img/sh_3.gif" alt=""></a>
+                            <a href="#"><img src="./img/sh_4.gif" alt=""></a>
+                            <a href="#"><img src="./img/sh_5.gif" alt=""></a>
+                        </div>
+                        </p>
+                        <div class="dj">
+                            <div class="dj_dj">
+                                <input type="text" value="1" name="" class="x_s" />
+                                <input type="button" value="" class="jia" />
+                                <input type="button" value="" class="jian" />
+                            </div>
+                            <span><a><img src="img/j_car.png" /></a></span>
+                        </div>
+
+                    </div>
+                    <!-- 右边 -->
+                    <div class="xq_r">
+                        <div class="t_tu">
+                            <img src="./img/sbrand.jpg" alt="">
+                        </div>
+                        <button><a href="#">进入品牌专区
+                            </a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="history">
+                <div class="h_s hhh">
+                    <span>用户还喜欢</span>
+
+                </div>
+                <ul>
+                    <li>
+                        <div class="tu"><a href="#"><img src="img/his_1.jpg" /></a></div>
+                        <div class="t_n"><a href="#">Dior/迪奥香水2件套装</a></div>
+                        <div class="t_m">
+                            <span>￥368.00</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tu"><a href="#"><img src="img/his_2.jpg" /></a></div>
+                        <div class="t_n"><a href="#">Dior/迪奥香水2件套装</a></div>
+                        <div class="t_m">
+                            <span>￥768.00</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tu"><a href="#"><img src="img/his_3.jpg" /></a></div>
+                        <div class="t_n"><a href="#">Dior/迪奥香水2件套装</a></div>
+                        <div class="t_m">
+                            <span>￥680.00</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tu"><a href="#"><img src="img/his_4.jpg" /></a></div>
+                        <div class="t_n"><a href="#">Dior/迪奥香水2件套装</a></div>
+                        <div class="t_m">
+                            <span>￥368.00</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tu"><a href="#"><img src="img/his_5.jpg" /></a></div>
+                        <div class="t_n"><a href="#">Dior/迪奥香水2件套装</a></div>
+                        <div class="t_m">
+                            <span>￥368.00</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="c_ct">
+                <!--推荐搭配-->
+                <div class="c_cct">
+                    <div class="cct_t">
+                        <p>推荐搭配</p>
+                    </div>
+                    <div class="c_tu">
+                        <div class="c_ta">
+                            <div class="tu"><a href="#"><img src="img/mat_1.jpg" /></a></div>
+                            <div class="t_n"><a href="#">粤通国际珠宝 999足金</a></div>
+                            <div class="t_nb">
+                                <input type="checkbox"
+                                    checked="checked">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>￥76</span>
+                            </div>
+                        </div>
+                        <span class="jiahao"><img src="./img/jia_b.gif" alt=""></span>
+                        <div class="c_ta">
+                            <div class="tu"><a href="#"><img src="img/mat_2.jpg" /></a></div>
+                            <div class="t_n"><a href="#">珠韵 9.5-10.5mm珍珠项链</a></div>
+                            <div class="t_nb">
+                                <input
+                                    type="checkbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>￥1890</span>
+                            </div>
+                        </div>
+                        <span class="jiahao"><img src="./img/jia_b.gif" alt=""></span>
+                        <div class="c_ta">
+                            <div class="tu"><a href="#"><img src="img/mat_3.jpg" /></a></div>
+                            <div class="t_n"><a href="#">清新耳环</a></div>
+                            <div class="t_nb">
+                                <input type="checkbox"
+                                    checked="checked">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>￥232</span>
+                            </div>
+                        </div>
+                        <span class="jiahao"><img src="./img/equl.gif" alt=""></span>
+                        <div class="zuhe">
+                            <p>套餐价：￥<span>2000</span></p>
+                            <p>1</p>
+                            <button>组合购买</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c_cct" id="c_a">
+                    <div class="cct_t">
+                        <a href="#">商品属性</a>
+                        <a href="#xq">商品详情</a>
+                        <a href="#pl">商品评论</a>
+                    </div>
+                    <div class="neir">
+                        <div class="xq_xq">
+                            <p>商品名称：天然淡水珍珠</p>
+                            <p>商品毛重：160.00g</p>
+                            <p>镶嵌材质：纯银</p>
+                        </div>
+                        <div class="xq_xq">
+                            <p>商品编号：1546211</p>
+                            <p>商品产地：法国</p>
+                            <p>款式：项链</p>
+                        </div>
+
+                        <div class="xq_xq">
+                            <p>品牌：珠韵首饰</p>
+                            <p>珍珠形状：正圆</p>
+
+                        </div>
+                        <div class="xq_xq">
+                            <p>上架时间：2015-09-06 09:19:09</p>
+                        </div>
+                    </div>
+                    <!-- 详情 -->
+                    <div class="xq_qx">
+                        <div class="xq_tp">
+                            <span id="xq">商品详情</span>
+                        </div>
+                        <div class="xq_tu">
+                            <img src="./img/de2.jpg" alt="">
+                            <br>
+                            <br>
+                            <img src="./img/de3.jpg" alt="">
+                            <br>
+                            <br>
+                            <img src="./img/de4.jpg" alt="">
+                            <br>
+                            <br>
+                            <img src="./img/de5.jpg" alt="">
+                            <br>
+                            <br>
+                            <img src="./img/de6.jpg" alt="">
+                            <br>
+                            <br>
+                            <img src="./img/de7.jpg" alt="">
+                            <br>
+                            <br>
+                            <img src="./img/de8.jpg" alt="">
+                            <br>
+                            <br>
+                        </div>
+                    </div>
+                    <!-- 商品评论 -->
+                    <div class="xq_qx" id="pl">
+                        <div class="xq_tp">
+                            <span id="xq">商品详情</span>
+                        </div>
+                        <div class="pl_b">
+                            <!-- 好评度 -->
+                            <div class="pl_pl">
+                                <div class="hpd">
+                                    <p>80.0%</p> 好评度
+                                </div>
+                                <div class="hpy">
+                                    <p><span class="v">好评 <span class="bai">(80%)</span></span><img src="./img/pl.gif"
+                                            alt=""></p>
+                                    <p><span class="v">中评 <span class="bai">(20%)</span></span><img src="./img/pl.gif"
+                                            alt=""></p>
+                                    <p><span class="v">差评 <span class="bai">(0%)</span></span><img src="./img/pl.gif"
+                                            alt=""></p>
+                                </div>
+                                <div class="gm">
+                                    购买过珠韵首饰 天然银扣珍珠项链的顾客，在收到商品才可以对该商品发表评论
+                                </div>
+                                <div class="pj">
+                                    您可对已购买商品进行评价
+                                    <img src="" alt="图片加载失败">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 用户评论 -->
+                        <div class="yhpl">
+                            <div class="yh_a">
+                                <div class="a_l">
+                                    <p><img src="./img/peo1.jpg" alt="">向死而生</p>
+                                </div>
+                                <div class="a_l">
+                                    <p>颜色分类：<span>粉色</span></p>
+                                    <p>型号：43</p>
+                                </div>
+                                <div class="a_l">
+                                    <p>产品很好，香味很喜欢，必须给赞.</p>
+                                    <p><span>2015-09-24</span></p>
+                                </div>
+                            </div>
+                            <div class="yh_a">
+                                <div class="a_l">
+                                    <p><img src="./img/peo2.jpg" alt="">向死而生</p>
+                                </div>
+                                <div class="a_l">
+                                    <p>颜色分类：<span>白色</span></p>
+                                    <p>型号：43</p>
+                                </div>
+                                <div class="a_l">
+                                    <p>香味很喜欢，必须给赞.</p>
+                                    <p><span>2015-09-24</span></p>
+                                </div>
+                            </div>
+                            <div class="yh_a">
+                                <div class="a_l">
+                                    <p><img src="./img/peo3.jpg" alt="">向死而生</p>
+                                </div>
+                                <div class="a_l">
+                                    <p>颜色分类：<span>黑色</span></p>
+                                    <p>型号：43</p>
+                                </div>
+                                <div class="a_l">
+                                    <p>灰常给力,必须给赞.</p>
+                                    <p><span>2015-09-24</span></p>
+                                </div>
+                            </div>
+                            <div class="yh_a">
+                                <div class="a_l">
+                                    <p><img src="./img/peo4.jpg" alt="">向死而生</p>
+                                </div>
+                                <div class="a_l">
+                                    <p>颜色分类：<span>黄色</span></p>
+                                    <p>型号：43</p>
+                                </div>
+                                <div class="a_l">
+                                    <p>有点东西,兄弟</p>
+                                    <p><span>2015-09-24</span></p>
+                                </div>
+                            </div>
+                            <!-- 页数 -->
+                            <div class="yeshu">
+                                <a href="#" class="s_y">上一页</a>
+                                <a href="#" class="s_l">1</a>
+                                <a href="#">2</a>
+                                <a href="#">3</a>
+                                <span>...</span>
+                                <a href="#">20</a>
+                                <a href="#" class="x_y">下一页</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底部 -->
+    <div class="footer">
+        <div class="ftop">
+            <ul class="ftop_ul">
+                <li>
+                    <a><img src="./img/b1.png"></a>
+                    <div>
+                        <h2>正品保障</h2>正品行货 放心购买
+                    </div>
+                </li>
+                <li>
+                    <a><img src="./img/b2.png"></a>
+                    <div>
+                        <h2>满38包邮</h2>满38包邮 免运费
+                    </div>
+                </li>
+                <li>
+                    <a><img src="./img/b3.png"></a>
+                    <div>
+                        <h2>天天低价</h2>天天低价 畅选无忧
+                    </div>
+                </li>
+                <li>
+                    <a><img src="./img/b4.png"></a>
+                    <div>
+                        <h2>准时送达</h2>收货时间由你做主
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--底部信息 -->
+    <div class="fit">
+        <dl>
+            <dt><a href=" #">新手上路</a></dt>
+            <dd><a href="#">售后流程</a></dd>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">订购方式</a></dd>
+            <dd><a href="#">隐私声明</a></dd>
+            <dd><a href="#">推荐分享说明</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="#">配送与支付</a></dt>
+            <dd><a href="#">货到付款区域</a></dd>
+            <dd><a href="#">配送支付查询</a></dd>
+            <dd><a href="#">支付方式说明</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="#">会员中心</a></dt>
+            <dd><a href="#">资金管理</a></dd>
+            <dd><a href="#">我的收藏</a></dd>
+            <dd><a href="#">我的订单</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="#">服务保证</a></dt>
+            <dd><a href="#">退换货原则</a></dd>
+            <dd><a href="#">售后服务保证</a></dd>
+            <dd><a href="#">产品质量保证</a></dd>
+        </dl>
+        <dl>
+            <dt><a href="#">联系我们</a></dt>
+            <dd><a href="#">网站故障报告</a></dd>
+            <dd><a href="#">购物咨询</a></dd>
+            <dd><a href="#">投诉与建议</a></dd>
+        </dl>
+        <div class="tu_">
+            <div class=" tu_a">
+                <img src="./img/ewm.png" alt="">
+
+            </div>
+
+        </div>
+        <div class="tu_b">
+            <p> <a href="#">新浪微博</a></p>
+            <p><a href="#">腾讯微博</a></p>
+            <p class="p_z">
+                服务热线：<br />
+                <span>400-123-4567</span>
+            </p>
+        </div>
+    </div>
+    <div class="fbt">
+        <div class="copy">
+            备案/许可证编号：蜀ICP备12009302号-1-www.dingguagua.com Copyright© 1号店网上超市 2007-2016，All Rights
+            Reserved.
+            复制必究,Technical Support: Dgg Group
+            <br>
+            <img src="./img/b_1.gif" alt="">
+            <img src="./img/b_2.gif" alt="">
+            <img src="./img/b_3.gif" alt="">
+            <img src="./img/b_4.gif" alt="">
+            <img src="./img/b_5.gif" alt="">
+            <img src="./img/b_6.gif" alt="">
+        </div>
+    </div>
+
+</body>
+
+
+
+
+</html>
+<script src="./js/datais.js"></script>

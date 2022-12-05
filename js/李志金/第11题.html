@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //11. 分数数组[56, 78, 77, 32, 99]，要求把数组中不及格的删除，剩余的放到新数组里面
+    var num = [56, 78, 77, 32, 99];
+    for (i = 0; i < num.length; i++) {
+        if (num[i] <= '60') {
+            num.splice(i, 1)
+            var adv = num
+        }
+    } console.log('及格的是' + adv);
+</script>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: gray;
+            /* font-size: 14px; */
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        .navigation li {
+            padding-left: 20px;
+            line-height: 30px;
+            display: inline-block;
+        }
+
+        .navigation {
+            height: 30px;
+            color: gray;
+            /* background-color: antiquewhite; */
+        }
+
+        ul {
+            display: inline-block;
+        }
+
+        .zuo {
+            width: 77%;
+
+        }
+
+
+
+        .you li:nth-of-type(1) {
+            padding-right: 25px;
+            background: url(./img/sun.png)no-repeat 54px 3px;
+        }
+
+        .you li:nth-of-type(2) {
+            padding-left: 5px;
+            padding-right: 20px;
+            background: url(./img/liang.png)no-repeat 44px 6px;
+        }
+
+        .you li:nth-of-type(4) {
+            padding-left: 50px;
+            background: url(./img/user.png)no-repeat 15px -1px;
+        }
+
+        .nav {
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+        }
+
+        .i1 {
+            width: 400px;
+            height: 35px;
+            margin-left: 30px;
+            border-right: 0;
+            border-radius: 5px 0 0 5px;
+            border: 1px solid gray;
+            outline: none;
+            background: url(./img/camera.png)no-repeat 365px center;
+        }
+
+        .i2 {
+            vertical-align: bottom;
+            width: 80px;
+            border-left: 0;
+            height: 35px;
+            outline: none;
+            border-radius: 0 5px 5px 0;
+            color: ghostwhite;
+            background-color: rgb(70, 98, 217);
+        }
+
+        h3>a {
+            color: rgb(62, 59, 59);
+        }
+
+        .box1 {
+            width: 63%;
+            height: 360px;
+            /* background-color: aqua; */
+            margin: 80px auto;
+        }
+
+        .box2 {
+            width: 55%;
+            height: 360px;
+            float: left;
+            /* background-color: yellow; */
+        }
+
+        .box3 {
+            width: 38%;
+            height: 360px;
+            float: right;
+            /* background-color: violet; */
+
+        }
+
+        .t1 {
+            display: inline-flex;
+            margin-top: 24px;
+        }
+
+        .t11 {
+            margin-left: 10px;
+        }
+
+
+        .box2 span {
+            color: gray;
+            font-size: 12px;
+        }
+
+        .box2>h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        .box3 span {
+            display: inline-block;
+
+        }
+
+        .left {
+            text-indent: 25px;
+            width: 78%;
+        }
+
+        .right {
+            margin-left: 22px;
+        }
+
+        .box3 a {
+            color: black;
+        }
+
+        .box3 li {
+            height: 31px;
+        }
+
+        .box3 a:hover {
+            color: red;
+        }
+
+        .left li:nth-of-type(1) {
+            text-indent: 0;
+        }
+
+        .left li:nth-of-type(2) {
+            background: url(./img/1.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(3) {
+            background: url(./img/2.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(4) {
+            background: url(./img/3.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(5) {
+            background: url(./img/4.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(6) {
+            background: url(./img/5.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(7) {
+            background: url(./img/6.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(8) {
+            background: url(./img/7.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(9) {
+            background: url(./img/8.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(10) {
+            background: url(./img/9.png) no-repeat 1px 4px;
+        }
+
+        .left li:nth-of-type(11) {
+            background: url(./img/10.png) no-repeat 1px 4px;
+        }
+
+        .right {
+            text-align: right;
+            color: gray;
+            font-size: 14px;
+        }
+
+        .right li:nth-of-type(1) {
+            margin-left: -26px;
+            background: url(./img/flush.png) no-repeat 1px 1px;
+        }
+
+        .icon {
+            width: 22px;
+            border: 1px solid grey;
+            height: 50px;
+            border-radius: 10px;
+            position: relative;
+            left: 480px;
+        }
+
+        .icon img {
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 总体 -->
+    <div class="box">
+        <!-- 导航栏 -->
+        <div class="navigation">
+            <!-- 左边 -->
+            <ul class="zuo">
+                <li><a href="#">新闻</a></li>
+                <li><a href="#">hao123</a></li>
+                <li><a href="#">地图</a></li>
+                <li><a href="#">直播</a></li>
+                <li><a href="#">视频</a></li>
+                <li><a href="#">贴吧</a></li>
+                <li><a href="#">学术</a></li>
+                <li><a href="#">更多</a></li>
+            </ul>
+            <!-- 右边 -->
+            <ul class="you">
+                <li><a href="#">郑州</a></li>
+                <li><a href="#">16°C</a></li>
+                <li><a href="#">设置</a></li>
+                <li><a href="#">dxs1573</a></li>
+            </ul>
+        </div><br><br>
+        <div class="nav">
+            <!-- 图片 -->
+            <p><img src="./img/head_logo.png" alt=""></p>
+            <br>
+            <!-- 搜索框 -->
+            <input type="text" class="i1"><input class="i2" type="submit" value="百度一下">
+        </div>
+        <!-- 内容 -->
+        <div class="box1">
+            <div class="box2">
+                <!-- 左边 -->
+                <p><span>我的关注</span>&nbsp;&nbsp;<span
+                        style="border-bottom: 1px solid blue;">推荐</span>&nbsp;&nbsp;<span>导航</span></p>
+
+                <h3><a href="./赏湖.html">众人蜂拥赏湖吊桥上游玩，致吊桥不堪重负被压弯！惊险一幕...</a></h3>
+                <span>人民咨询</span>
+                <div class="t1">
+                    <img src="./img/推荐_01.png" alt="">
+                    <div class="t11">
+                        <h3><a href="#">父亲有无可能休产假？白岩松：希望我这个回答能上热搜！网友：安排！</a></h3>
+                        <br><br>
+                        <span>杭州日报&nbsp;&nbsp;03-09&nbsp;13:40</span>
+                    </div>
+                </div>
+                <div class="t1 ">
+                    <img src="./img/推荐_02.png" alt="">
+                    <div class="t11">
+                        <h3><a href="#">光威纯国产内存2021年将大幅增产，有望抑制价格上涨</a></h3>
+                        <br><br>
+                        <span>IT之家&nbsp;&nbsp;03-09&nbsp;14:58</span>
+                    </div>
+                </div>
+            </div>
+            <!-- 右边 -->
+            <div class="box3">
+                <ul class="left">
+                    <li>
+                        百度热榜
+                    </li>
+                    <li>
+                        <a href="#">英通信管理局对CGTN罚款中方回应</a>
+                    </li>
+                    <li><a href="#">政府工作报告拟作81处修改</a></li>
+                    <li><a href="#">代表称年轻偶像不要迷失自我</a></li>
+                    <li><a href="#">代表建议推行免费婚检</a>/li>
+                    <li><a href="#">代表建议取消1至3年级家庭作业</a></li>
+                    <li><a href="#">院士吐槽带量子的护肤品肯定不好</a></li>
+                    <li><a href="#">建议普高录取率提高至80%以上</a></li>
+                    <li><a href="#">代表的河南话版中国加油顺门溜火了</a></li>
+                    <li><a href="#">委员建议人口低10万的小具合并</a></li>
+                    <li><a href="#">建议禁止在中小学老师有偿补课</a></li>
+                </ul>
+                <ul class="right">
+                    <li class="r1"><a href="#">换一换</a></li>
+                    <li>480万</li>
+                    <li>463万</li>
+                    <li>447万</li>
+                    <li>431万</li>
+                    <li>416万</li>
+                    <li>410万</li>
+                    <li>387万</li>
+                    <li>374万</li>
+                    <li>361万</li>
+                    <li>348万</li>
+                </ul>
+                <!-- 图标 -->
+                <div class="icon">
+                    <img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/mancard/img/side/qrcode@2x-daf987ad02.png"
+                        alt="">
+                    <img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/mancard/img/side/totop@2x-baa701cb1b.png"
+                        alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

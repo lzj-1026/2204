@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Fd(home_, money_) {
+        this.home = home_;
+        this.money = money_;
+    }
+
+
+
+    Fd.prototype.show = function () {
+        console.log('Fd原型对象上面的方法show');
+    }
+
+    function Son(nb_, name_) {
+        this.nb = nb_;
+        this.name = name_;
+
+        Fd.call(this, '拖拉机', '茅草屋')
+    }
+    Son.prototype = new Fd();
+    Son.prototype.constructor = Son;
+    var ls = new Son('李四', 18);
+
+
+    console.log('李四:', ls.name, ls.nb, ls.home, ls.money);
+
+    ls.show();
+</script>

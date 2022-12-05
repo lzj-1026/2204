@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    用户名:<input type="text" id="username" value="">
+    <br>
+    密码:<input type="password" id="psd" value="">
+    <br>
+    记住密码:<input type="checkbox" id="rember" value="">
+    <br>
+    <button onclick="loding()">登录</button>
+</body>
+
+</html>
+<script src="./myCookie.js"></script>
+<script>
+    if (getCookie("rember")) {
+        user_.value = getCookie("user")
+        psd_.value = getCookie("psd")
+        rember_.checked = getCookie("rember")
+    }
+    function loding() {
+        var user_ = username.value
+        var psd_ = psd.value
+        var rember_ = rember.checked
+        if (rember_) {
+            setCookie('user', user_)
+            setCookie('psd', psd_)
+            setCookie('rember', rember_)
+        }
+        else {
+            removeCookie('user')
+            removeCookie('psd')
+            removeCookie('rember')
+        }
+    }
+</script>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            /* margin: auto; */
+            width: 650px;
+            overflow: hidden;
+            height: 320px;
+            border: 2px solid rebeccapurple;
+            list-style: none;
+        }
+
+        img {
+            width: 200px;
+            height: 80px;
+            float: left;
+        }
+
+        li {
+            width: 200px;
+            height: 100px;
+            margin-left: 10px;
+
+            margin-bottom: 10px;
+
+            list-style: none;
+            float: left;
+            font-size: 30px;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        li:nth-of-type(1) {
+            margin-top: 10px;
+        }
+
+        li:nth-of-type(2) {
+            margin-top: 10px;
+        }
+
+        li:nth-of-type(3) {
+            margin-top: 10px;
+        }
+
+        .mb {
+            width: 650px;
+            height: 320px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(49, 178, 135, .2);
+        }
+
+        .active {
+            position: absolute;
+            width: 400px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .active>img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li onclick="scrool_(this)">
+            <img src="./img/1.jpg" alt="">
+        </li>
+        <li onclick="scrool_(this)">
+            <img src="./img/2.jpg" alt="">
+        </li>
+        <li onclick="scrool_(this)">
+            <img src="./img/3.jpg" alt="">
+        </li>
+        <li onclick="scrool_(this)">
+            <img src="./img/4.jpg" alt="">
+        </li>
+        <li onclick="scrool_(this)">
+            <img src="./img/5.jpg" alt="">
+        </li>
+        <li onclick="scrool_(this)">
+            <img src="./img/6.jpg" alt="">
+        </li>
+        <li onclick="scrool_(this)">
+            <img src="./img/1.jpg" alt="">
+        </li>
+        <li onclick="scrool_(this)">
+            <img src="./img/2.jpg" alt="">
+        </li>
+        <li onclick="scrool_(this)">
+            <img src="./img/3.jpg" alt="">
+        </li>
+
+    </ul>
+</body>
+
+</html>
+<script>
+    function scrool_(that) {
+        //拷贝图片  用来放大  不可直接放大  不然下边的就没了
+        var chose = that.cloneNode(true)
+        chose.className = 'active'
+        //创建一个div   接收蒙版属性值
+        var div_ = document.createElement('div');
+        //把蒙版属性传给div
+        div_.className = 'mb'
+        div_.appendChild(chose)
+
+        //把蒙版添加到body中 
+        var ul_ = document.querySelector('ul');
+        ul_.appendChild(div_)
+
+        //点击蒙版  删除当前蒙版和放大内容 
+        div_.onclick = function () {
+            ul_.removeChild(div_);
+            ul_.removeChild(chose)
+        }
+    }
+</script>

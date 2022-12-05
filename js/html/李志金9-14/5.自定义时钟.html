@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 80%;
+            height: 200px;
+            margin: 40px auto;
+            text-align: center;
+            background-color: rgb(15, 226, 25);
+            font-size: 50px;
+            line-height: 200px;
+            color: rgb(122, 132, 237);
+            border-radius: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>
+<script>
+    var div = document.getElementsByTagName('div')[0];
+    setInterval(function () {
+        var date = new Date();
+
+
+        //年
+        var year = date.getFullYear();
+        // document.write(year)
+
+
+
+        //月
+        var month = date.getMonth() + 1;
+        month = month >= 10 ? month : '0' + month;
+        // document.write(month)
+
+
+
+        //日
+        var time = date.getDate();
+        time = time >= 10 ? time : '0' + time;
+        // document.write(time);
+
+
+        //时
+        var hour = date.getHours();
+
+        hour = hour >= 10 ? hour : '0' + hour;
+        // document.write(hour);
+
+
+        //分
+        var m = date.getMinutes();
+        m = m >= 10 ? m : '0' + m;
+        // document.write(m)
+
+
+        //秒
+        var s = date.getSeconds();
+
+        s = s >= 10 ? s : '0' + s;
+        // document.write(s)
+
+        //周
+        var day = date.getDay();
+        var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+
+        var arry = [year + '年' + month + '月' + time + '日' + hour + ':' + m + ':' + s + weekDay[day]]
+
+
+        div.innerHTML = arry;
+    }, 1000)
+
+
+
+
+
+
+</script>

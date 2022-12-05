@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #close {
+            position: absolute;
+            top: 60px;
+            left: 134px;
+            z-index: 2;
+            cursor: hand;
+        }
+
+        #main {
+            text-align: center;
+
+        }
+
+        #main>img {
+            width: 70%;
+        }
+
+        #tu {
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="close"><img src="./img/close.jpg" alt="" onclick="end_()"></div>
+    <div id="main"><img src="./img/contentpic.jpg" alt=""></div>
+    <div id="tu"><img src="./img/advpic.jpg" alt=""></div>
+
+
+</body>
+
+</html>
+<script>
+    //绑定事件  点击消失 元素隐藏
+    function end_() {
+        document.getElementById('close').style.display = 'none'
+        document.getElementById('tu').style.display = 'none'
+    }
+    //声明变量
+    var close_;
+    var closeTop;
+    var closeLeft;
+
+    var tu;
+    var tuTop;
+    var tuLeft;
+    //页面加载完执行
+    window.onload = function () {
+        //；获取id
+        close_ = document.getElementById('close');
+        closeTop = close_.offsetTop;
+        closeLeft = close_.offsetLeft;
+
+        tu = document.getElementById('tu');
+        tuTop = tu.offsetTop;
+        tuLeft = tu.offsetLeft;
+
+
+    }
+
+
+
+    //滚动执行
+    window.onscroll = function () {
+        var scrollLeft = document.documentElement.scrollLeft;
+        var scrollTop = document.documentElement.scrollTop;
+
+        //叉号在页面的位置  等于原始的页面距离+ 滚动的距离
+        close_.style.top = closeTop + scrollTop + 'px';
+        close_.style.left = scrollLeft + closeLeft + 'px';
+
+
+        tu.style.top = tuTop + scrollTop + 'px';
+        tu.style.left = tuLeft + scrollLeft + 'px';
+
+
+    }
+</script>

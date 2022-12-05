@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //4. 定义数组[2, 0, 6, 1, 77, 0, 52, 0, 25, 7] ：求数组的和，最大值，最小值，平均数
+    var num = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+    var sum = 0;
+    var adv = 0;
+    var max;
+    var min;
+    for (i = 0; i < num.length; i++) {
+
+        num.sort(function (a, b) {
+            return a - b;
+        })
+        console.log(num[i]);
+        sum += num[i];
+        adv = sum / i;
+    } console.log(sum);
+    console.log('最大值' + num.slice(num.length - 1));
+    console.log('最小值' + num.slice(0, 1));
+    console.log('平均数' + adv);
+
+</script>

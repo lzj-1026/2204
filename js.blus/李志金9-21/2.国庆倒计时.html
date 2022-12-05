@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 30px auto;
+            width: 600px;
+            height: 80px;
+            background-color: rgba(51, 193, 211, 0.737);
+            color: violet;
+            font-size: 32px;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sj"></div>
+</body>
+
+</html>
+<script>
+    var time__ = document.getElementById('sj');
+    function interval() {
+        //获取时间
+        var newTime = new Date();
+        // console.log(newTime);
+        //创建时间
+        var time = new Date(2022, 8, 21, 20, 5)
+        // document.write(time)
+        //获取时间差
+        var time_ = time - newTime;
+
+        var day = Math.floor(time_ / 1000 / 60 / 60 / 24);
+        var h = Math.floor(time_ / 100 / 60 / 60 % 24)
+        var m = Math.floor(time_ / 1000 / 60 % 60)
+        var s = Math.floor(time_ / 1000 % 60)
+
+
+        var str = '距离国庆还有' + day + '天' + h + '时' + m + '分' + s + '秒'
+        console.log(str);
+        time__.innerHTML = str;
+
+
+        if (day == 0 && h == 0 && m == 0 && s == 0) {
+            time_.innerHTML = '国庆快乐，祝你幸福';
+            clearInterval(timer)
+
+        }
+
+
+    }
+    var timer = setInterval(interval, 1000)
+</script>

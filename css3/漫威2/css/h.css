@@ -1,0 +1,39 @@
+body {
+    background: url(../img/bj3.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(1) {
+    background: url(../img/h1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(2) {
+    background: url(../img/h3.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(3) {
+    background: url(../img/h5.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(1):hover {
+    background: url(../img/h2.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(2):hover {
+    background: url(../img/h4.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(3):hover {
+    background: url(../img/h6.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+p>a:nth-of-type(1) {
+    font-size: 20px;
+    color: rgb(113, 230, 161);
+}

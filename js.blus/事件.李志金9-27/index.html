@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            /* display: block; */
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            color: white;
+            font-size: 19px;
+            text-align: center;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./img/bj.png" alt="" width="100%">
+    </div>
+    <span id="ss" onclick="show()">返回顶部</span>
+</body>
+
+</html>
+<script>
+    // var img_ = document.getElementsByTagName('img')
+    var span = document.getElementById("ss")
+    var timer = null;
+    window.onscroll = function () {
+        var top_ = document.documentElement.scrollTop || document.body.scrollTop;
+        var top__ = document.documentElement.clientHeight || document.body.clientHeight;
+        if (top_ > top__) {
+            span.style.display = 'block'
+        } else {
+            span.style.display = "none"
+        }
+
+        span.onclick = function () {
+            timer = setInterval(function () {
+                // clearInterval(timer)
+                var top1 = document.documentElement.scrollTop;
+                console.log(top1);
+                var df = Math.floor(-top1 / 7)
+                console.log(df);
+                document.documentElement.scrollTop = top1 + df;
+                if (top1 == 0) {
+                    clearInterval(timer)
+                };
+            }, 30)
+        }
+    }
+</script>

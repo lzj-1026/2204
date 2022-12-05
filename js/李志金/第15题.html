@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //#### 15. 一个含有字符串的数组 ['a','b','c','a','g','c','g'],需要得到一个新数组
+
+    // ['a1', 'b', 'c1', 'a2', 'g1', 'c2', 'g2']
+    //   要求：未重复出现的元素不处理 
+    //               重复出现的元素加编号
+    //              不影响正常数组元素的顺序
+    var num = ['a', 'b', 'c', 'a', 'g', 'c', 'g']
+    for (i = 0; i < num.length; i++) {
+        for (j = i + 1; j < num.length; j++) {
+            if (num[i] == num[j]) {
+                num[i] = num[i] + '1';
+                num[j] = num[j] + '2';
+            }
+        }
+    } console.log(num);
+</script>

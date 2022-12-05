@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>论坛列表</title>
+    <link href="css/bbs.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="bbs">
+        <header><span onclick="post()">我要发帖</span></header>
+        <section>
+            <ul id="postList">
+                <li>
+                    <div><img src="images/tou03.jpg"></div>
+                    <h1>wo title</h1>
+                    <p>
+                        <span>版块：电子书籍</span>
+                        <span>发表时间：2021-08-26 11:29</span>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <div class="post" id="post">
+            <input class="title" placeholder="请输入标题（1-50个字符）" id="title">
+            所属版块：<select id="sec">
+                <option>请选择版块</option>
+                <option>电子书籍</option>
+                <option>新课来了</option>
+                <option>新手报到</option>
+                <option>职业规划</option>
+            </select>
+            <textarea class="content" id="content"></textarea>
+            <input type='button' class="btn" value="发布" onclick="postSuccess()">
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function post() {
+        var post_ = document.getElementById('post')
+        post_.style.display = 'block'
+
+    }
+    function postSuccess() {
+        //头像 
+        var ava_arr = new Array('tou01.jpg', 'tou02.jpg', 'tou03.jpg', 'tou04.jpg');
+        var img_ = document.createElement('div')
+        var img__ = document.createElement('img')
+
+        //图片数量
+        var img_index = Math.floor(Math.random() * 4);
+        //路径
+        img__.setAttribute('src', './images/' + ava_arr[img_index]);
+        //添加头像
+        img_.appendChild(img__);
+
+
+        //创建li 返回页面值
+        var li_ = document.createElement('li')
+
+        //创建标题
+        var h1_ = document.createElement('h1')
+        var h1_value = document.getElementById('title').value
+        h1_.innerHTML = h1_value;
+
+        //发表板块
+        var span1_ = document.createElement('span')
+        var span1_value = document.getElementById('sec').value
+        span1_.innerHTML = '板块：' + span1_value
+
+        // 创建时间  获取最新时间
+        var date = new Date();
+        var year = date.getFullYear();
+        //获取月
+        var month = date.getMonth() + 1;
+        month = month < 10 ? '0' + month : month;
+        //获取日
+        var day = date.getDate();
+        day = day < 10 ? '0' + day : day;
+        //获取时
+        var hour = date.getHours();
+        hour = hour < 10 ? '0' + hour : hour;
+        //分
+        var m = date.getMinutes();
+        m = m < 10 ? '0' + m : m;
+        //秒
+        var s = date.getSeconds();
+        s = s < 10 ? '0' + s : s;
+        //整合
+        var time_ = year + '-' + month + '-' + day + hour + ':' + m + ':' + s;
+
+        var time__ = document.createElement('span')
+        time__.innerHTML = '发表时间' + time_;
+
+        //创建p 接受板块信息  与  时间
+        var p = document.createElement('p')
+        p.appendChild(span1_);
+        p.appendChild(time__)
+
+        //把内容放进li里面
+        li_.appendChild(img_)
+        li_.appendChild(h1_)
+        li_.appendChild(p)
+
+        //获取页面元素
+        var postList = document.getElementById('postList');
+
+        //把li放在最前面  
+        postList.insertBefore(li_, postList.firstElementChild)
+
+        //设置默认属性
+        document.getElementById('title').value = ''
+        document.getElementById('content').value = ''
+
+        //先隐藏编辑栏
+        document.getElementById('post').style.display = 'none'
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //1. 新建一个数组，里面存放10个随机整数（ 100~1000）
+    var a = [];
+    for (i = 0; i < 10; i++) {
+        var b = Math.round(Math.random() * 100);
+        b = b < 100 ? b += 100 : b;
+        a.push(b)
+    }
+    // console.log(a.push(a[i]));
+    console.log(a);
+
+</script>

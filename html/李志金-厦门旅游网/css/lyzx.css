@@ -1,0 +1,37 @@
+.head a {
+    color: rgb(54, 50, 50);
+}
+
+.head a:hover {
+    color: rgb(51, 137, 215);
+}
+
+.head span:nth-of-type(3) {
+    color: gray;
+}
+
+/* ------鼓浪屿-------- */
+#con3 img {
+    width: 500px;
+    height: 300px;
+}
+
+#con3 {
+    height: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+}
+
+#f1 {
+    margin-top: 40px;
+}
+
+/* ===========美食============ */
+#con4 {
+    height: 1200px;
+}
+
+.font {
+    margin-top: 10px;
+}

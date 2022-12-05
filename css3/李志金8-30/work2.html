@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .box {
+            width: 280px;
+            margin: 40px auto;
+            border: 1px solid gray;
+            border-radius: 5px;
+            background-image: linear-gradient(#e9dafa 9%, #fbfcdb 21%);
+            height: 350px;
+            background-color: aqua;
+        }
+
+        .box p {
+            padding-left: 10px;
+            margin-top: 10px;
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid white;
+        }
+
+        .box p>span {
+            vertical-align: super;
+            color: white;
+        }
+
+        ul {
+            padding: 0 10px;
+            margin-top: 10px;
+            list-style: none;
+        }
+
+        ul li {
+            padding: 0 10px;
+            height: 40px;
+            line-height: 31px;
+            background: url(./img/dotBg.gif) no-repeat -8px -2px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: gray;
+        }
+
+        ul li a:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p><img src="./img/bg.gif" alt="">
+            <span>中心开班信息</span>
+        </p>
+        <ul>
+            <li><a href="#">8月12日:学历+技能班</a></li>
+            <li><a href="#">8月16日:高考特招班</a></li>
+            <li><a href="#">8月23日:Java精英班</a></li>
+            <li><a href="#">8月31日:学士后强化班</a></li>
+            <li><a href="#">8月31日:学士后强化班</a></li>
+            <li><a href="#">9月9日:企业定向委培班</a></li>
+            <li><a href="#">9月16日:网络营销强化班</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

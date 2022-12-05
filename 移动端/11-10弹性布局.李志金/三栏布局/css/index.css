@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+body .top,
+html .top {
+  width: 100%;
+  background-color: red;
+  height: 4rem;
+}
+body .bottom,
+html .bottom {
+  width: 100%;
+  height: 4rem;
+  background-color: green;
+}
+body .main,
+html .main {
+  flex: 1;
+  display: flex;
+}
+body .main span,
+html .main span {
+  font-size: 1.6rem;
+  color: white;
+}
+body .main span:nth-of-type(1),
+html .main span:nth-of-type(1) {
+  flex: 1;
+  background-color: aqua;
+}
+body .main span:nth-of-type(2),
+html .main span:nth-of-type(2) {
+  flex: 2;
+  background-color: #48309e;
+}
+body .main span:nth-of-type(3),
+html .main span:nth-of-type(3) {
+  flex: 1;
+  background-color: #bfff00;
+}

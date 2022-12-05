@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Fd(home_, money_) {
+        this.home = home_;
+        this.money = money_;
+    }
+    Fd.prototype.say = function () {
+        console.log('老大');
+    }
+
+    function Son(n, b) {
+        this.name = n
+        this.nb = b
+        Fd.apply(this, ['安达丽娅', '麻萨莉迪'])
+    }
+    Son.prototype = new Fd();
+    Son.prototype.constructor = Son;
+
+    var ls = new Son('李四', 18);
+
+
+    console.log('李四:', ls.name, ls.nb, ls.home, ls.money);
+
+    ls.say();
+</script>

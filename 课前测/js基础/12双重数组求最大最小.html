@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //      [4, 5, 1, 3], 
+    //   [13, 27, 18, 26], 
+    //   [32, 35, 37, 39], 
+    //   [1000, 1001, 857, 1]
+
+    var num1 = [[4, 5, 1, 3], [36, 57, 18, 26], [22, 52, 17, 63], [23, 25, 71, 36]]
+    // var num1= 
+    // var num1= 
+    // var num1= 
+    var max_ = []
+    for (var i = 0; i < num1.length; i++) {
+        var max = num1[i].sort(function (a, b) {
+            return b - a;
+        })[0]
+        max_.push(max)
+    }
+    console.log(max_);
+
+
+
+//  //方法2：
+//  var arry1 = [4, 5, 1, 3];
+//     var arry2 = [13, 27, 18, 26];
+//     var arry3 = [32, 35, 37, 39];
+//     var arry4 = [1000, 1001, 857, 1];
+
+//     var maxArry = [];// 所有最大值的数组
+
+//     arry1.sort(function (a, b) {
+//         return b - a;
+//     })
+//     var max1 = arry1[0];
+//     console.log(max1);
+
+//     var max2 = arry2.sort(function (a, b) {
+//         return b - a;
+//     })[0];
+
+//     console.log(max2);
+
+//     var max3 = arry3.sort(function (a, b) {
+//         return b - a;
+//     })[0];
+
+//     console.log(max3);
+//     var max4 = arry4.sort(function (a, b) {
+//         return b - a;
+//     })[0];
+
+//     console.log(max4);
+
+//     //向最大数组添加值
+    // maxArry.push(max1, max2, max3, max4);
+    // console.log(maxArry);//[5, 27, 39, 1001]
+</script>

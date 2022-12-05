@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function fn(obj) {
+        var hb_Obj = {
+            a: 'a',
+            b: "b",
+            c: "c",
+            d: "合并",
+        }
+        console.log(hb_Obj);
+        //相同属性 覆盖
+        //不同属性  合并
+        var new_Obj = Object.assign(hb_Obj, obj)
+        console.log(new_Obj);
+    }
+    fn({
+        a: "123",
+        b: "123456",
+        c: "123456789",
+    })
+
+</script>

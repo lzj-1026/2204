@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+body {
+  position: relative;
+  background-color: #eeeeee;
+}
+body header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  color: white;
+  text-align: center;
+  background-color: red;
+}
+body header span:nth-of-type(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3rem;
+  height: 3rem;
+  background: url(../img/back.png) no-repeat center;
+  background-size: 100%;
+}
+body header span:nth-of-type(2) {
+  text-align: center;
+  font-size: 2rem;
+}
+body main {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 1%;
+  padding-top: 3rem;
+}
+body main ul {
+  padding-top: 1%;
+}
+body main ul li {
+  height: 10rem;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 1%;
+  padding-top: 1%;
+}
+body main ul li .as {
+  width: 100%;
+  height: 0.35rem;
+  background: url(../img/border.png) 0 0.3rem;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+body main ul li .box1 {
+  float: left;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body main ul li .box1 img {
+  width: 100%;
+  height: 100%;
+}
+body main ul li p {
+  overflow: hidden;
+  font-size: 1.4rem;
+}
+body main ul li p span {
+  color: #131212;
+  font-size: 1.4rem;
+}
+body main ul li p .s1 {
+  float: right;
+  color: #fefefe;
+  font-size: 1.2rem;
+  background: #e6071b;
+  padding: 0.2rem 1rem;
+}
+body main ul li p .s2 {
+  position: absolute;
+  top: 2rem;
+  right: 1%;
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #D8D8D8;
+  color: #D8D8D8;
+  transform: rotate(320deg);
+}
+body main ul li p:nth-of-type(2) {
+  color: #6d6464;
+  font-size: 1.5rem;
+}
+body main ul li .box2 {
+  margin-top: 1%;
+  border-top: 1px solid gray;
+  padding: 1% 1%;
+}
+body main ul li .box2 .an {
+  width: 100%;
+  height: 0.35rem;
+  background: url(../img/border.png) 0.1rem 0.1rem;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+body main ul li .box2 span {
+  font-size: 1.6rem;
+}
+body main ul li .box2 span:nth-of-type(2) {
+  color: red;
+}
+body main ul li .box2 P:nth-of-type(1) {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #EEEEEE;
+  position: absolute;
+  left: -0.6rem;
+  top: 5.3rem;
+}
+body main ul li .box2 P:nth-of-type(2) {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #EEEEEE;
+  position: absolute;
+  right: -0.6rem;
+  top: 5.3rem;
+}

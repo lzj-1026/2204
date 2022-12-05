@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            text-align: center;
+        }
+
+        span {
+            font-size: 18px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <p> <img src="./((8MVF0T]Y(2X5KE8DWXHXC.jpg" alt=""></p>
+    <p>此页面涉嫌违规浏览器无法访问,<span>5</span>秒后自动返回</p>
+
+</body>
+
+</html>
+<script>
+    var num = 5;
+    var span_ = document.getElementsByTagName('span')[0];
+    // console.log(span);
+
+    var timer = setInterval(function () {
+        num--;
+        span_.innerHTML = num;
+        if (num == 0) {
+            clearInterval(timer);
+            history.go(-1);
+
+        }
+    }, 1000)
+
+    // var
+</script>

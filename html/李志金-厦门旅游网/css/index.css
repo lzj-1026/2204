@@ -1,0 +1,937 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100%;
+    height: 3110px;
+    background: url(../img/bg.jpg) no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 导航栏 */
+.nav li {
+    list-style: none;
+}
+
+
+.nav {
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.nav>span {
+    top: 0px;
+    left: 85px;
+    position: absolute;
+}
+
+.nav1 {
+    width: 100%;
+    height: 33px;
+    margin-top: 15px;
+    padding-right: 65px;
+    /* overflow: hidden; */
+    background-color: rgb(17, 17, 17);
+}
+
+.nav2 {
+    width: 465px;
+    height: 33px;
+    float: right;
+    background-color: rgb(17, 17, 17);
+}
+
+.nav2 li {
+    float: left;
+    width: 85px;
+    height: 33px;
+    display: block;
+    line-height: 40px;
+}
+
+.nav1 li:nth-of-type(1) {
+    background: url(../img/lag.png);
+}
+
+.nav1 li:nth-of-type(1):hover {
+    cursor: pointer;
+    background: url(../img/lag.png) no-repeat -80px -1px;
+}
+
+.nav1 li:nth-of-type(2) {
+    background: url(../img/lag.png) no-repeat 0px -34px;
+}
+
+.nav1 li:nth-of-type(2):hover {
+    cursor: pointer;
+    background: url(../img/lag.png) no-repeat -80px -34px;
+}
+
+.nav1 li:nth-of-type(3) {
+    background: url(../img/lag.png) no-repeat 0px -68px;
+}
+
+.nav1 li:nth-of-type(3):hover {
+    cursor: pointer;
+    background: url(../img/lag.png) no-repeat -80px -68px;
+}
+
+.nav1 li:nth-of-type(4) {
+    background: url(../img/lag.png) no-repeat 0px -102px;
+}
+
+.nav1 li:nth-of-type(4):hover {
+    cursor: pointer;
+    background: url(../img/lag.png) no-repeat -80px -102px;
+}
+
+.nav1 li:nth-of-type(5) {
+    width: 114px;
+    height: 33px;
+    color: blue;
+    line-height: 35px;
+    padding-left: 28px;
+    background: url(../img/b7.png) no-repeat 0px 3px;
+    background-color: rgb(60, 135, 199);
+}
+
+/* -----二导航------ */
+.nav3 {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(14, 42, 72);
+}
+
+.nav4 {
+    margin-left: 85px;
+    height: 70px;
+    width: 1200px;
+}
+
+.nav4 li {
+    display: block;
+    margin: 0px 20px;
+    height: 70px;
+    float: left;
+    line-height: 73px;
+}
+
+/* ---------二级导航----------- */
+.nav4 li a {
+    font-weight: 600;
+    color: white;
+}
+
+.nav4 li:nth-of-type(1) {
+    margin-left: 260px;
+}
+
+.nav4 li:nth-of-type(4) {
+    position: relative;
+    z-index: 2;
+}
+
+.nav4 li:nth-of-type(5) {
+    position: relative;
+    z-index: 2;
+}
+
+.nav4 li:nth-of-type(6) {
+    position: relative;
+    z-index: 2;
+}
+
+.nav4 li:nth-of-type(7) {
+    position: relative;
+    z-index: 2;
+}
+
+.nav4 li:nth-of-type(8) {
+    position: relative;
+    z-index: 2;
+}
+
+.nav4 li:nth-of-type(9) {
+    position: relative;
+    z-index: 2;
+}
+
+.Secondary {
+    width: 130px;
+    /* height: 300px; */
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: rgb(0, 138, 206);
+}
+
+.Secondary p {
+    height: 35px;
+    color: white;
+    padding-left: 20px;
+    line-height: 35px;
+}
+
+.nav4 li:nth-of-type(4):hover .Secondary {
+    display: block;
+}
+
+.nav4 li:nth-of-type(5):hover .Secondary {
+    display: block;
+}
+
+.nav4 li:nth-of-type(6):hover .Secondary {
+    display: block;
+}
+
+.nav4 li:nth-of-type(7):hover .Secondary {
+    display: block;
+}
+
+.nav4 li:nth-of-type(8):hover .Secondary {
+    display: block;
+}
+
+.nav4 li:nth-of-type(9):hover .Secondary {
+    display: block;
+}
+
+.nav4 li:nth-of-type(4):hover .Secondary {
+    display: block;
+}
+
+
+.banner {
+    width: 100%;
+    height: 340px;
+    position: relative;
+    background: url(../img/bpic.jpg)no-repeat;
+    background-size: 100% 340px;
+
+
+}
+
+.banner span {
+    right: 310px;
+    top: 35px;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+/* ---内容--- */
+.content {
+    margin: 10px auto;
+    width: 80%;
+    /* background-color: rgb(221, 65, 108); */
+}
+
+/* 旅游与资讯 */
+.box1 {
+    height: 320px;
+    display: flex;
+}
+
+/* ----------左列---------- */
+.list1 {
+    width: 20%;
+    background-color: rgb(0, 65, 108);
+    list-style: square;
+
+}
+
+.list1 li {
+    margin-left: 42px;
+    height: 30px;
+    margin-top: 10px;
+    line-height: 30px;
+
+}
+
+.list1>li>a {
+    color: white;
+}
+
+/* 改变li颜色 */
+.list1 li::marker {
+    color: white;
+}
+
+.list1 li:nth-of-type(1) {
+    list-style: none;
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 20px;
+    color: rgb(125, 199, 227);
+    border-bottom: 2px solid;
+}
+
+/* -------图片------- */
+.slideshow img {
+    /* height: 344px; */
+    margin: 0 5px;
+    margin-right: 18px;
+
+}
+
+/* -------列表2------ */
+.list2 {
+    width: 30%;
+
+    padding: 10px;
+    padding-right: 0;
+}
+
+/* 表头 */
+.list2 .title {
+    height: 37px;
+    border-bottom: 3px solid skyblue;
+}
+
+.list2 .title span {
+    height: 37px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    border-bottom: 3px solid blue !important;
+    float: left;
+}
+
+.list2 .title i {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    float: right;
+}
+
+/* --------列表内容---------- */
+.list3 {
+    width: 100%;
+    padding: 10px 0;
+    list-style: none;
+    font-size: 14px;
+    margin: 12px 0px;
+    background-color: white;
+}
+
+.list3 li {
+    background: url(../img/arrow_bottom.png) no-repeat 7px 10px;
+    padding-left: 20px;
+    line-height: 30px;
+    height: 30px;
+}
+
+.list3 li a {
+    color: gray;
+}
+
+.list3 li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/* ---------精品线路---------- */
+.box2 {
+    /* background-color: rgb(255, 255, 255); */
+    width: 100%;
+    height: 400px;
+    display: inline-flex;
+    margin-top: 10px;
+}
+
+.zuo {
+    width: 867px;
+    margin-right: 28px;
+    /* background-color: yellow; */
+    height: 100%;
+}
+
+/* -------顶部------- */
+.xldeng {
+    background-color: rgb(0, 98, 165);
+    height: 50px;
+    width: 895px;
+    display: inline-flex;
+    /* background-color: aqua; */
+}
+
+.jpxl {
+    width: 30%;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    padding-left: 23px;
+    font-weight: 600;
+    /* background-color: black; */
+}
+
+.caption {
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    /* background-color: blue; */
+}
+
+.caption span {
+    margin-left: 20px;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 5px;
+}
+
+.caption span:nth-of-type(1) {
+    margin-left: -5px;
+    background-color: rgb(255, 223, 94);
+}
+
+.caption span:nth-of-type(2) {
+    background-color: rgb(96, 189, 254);
+}
+
+.caption span:nth-of-type(3) {
+    background-color: rgb(156, 226, 128);
+}
+
+.caption span:nth-of-type(4) {
+    background-color: rgb(69, 210, 193);
+}
+
+.caption span:nth-of-type(5) {
+    background-color: rgb(254, 167, 202);
+}
+
+.caption span:hover {
+    background-color: rgb(0, 57, 96);
+}
+
+.caption span:hover a {
+    color: white;
+}
+
+.caption span a {
+    color: black;
+    font-weight: 600;
+}
+
+.qt {
+    font-size: 14px;
+    padding-left: 18px;
+    line-height: 50px;
+    color: white;
+}
+
+/* -------内容------- */
+.xlx {
+    height: 350px;
+    width: 895px;
+    background-color: rgb(255, 255, 255);
+    display: inline-flex;
+}
+
+/* --------线路内容1---------- */
+.xlce {
+    width: 35%;
+    height: 350px;
+}
+
+.xlce a:nth-of-type(1) {
+    display: block;
+    width: 100%;
+    padding-left: 10px;
+    height: 120px;
+    position: relative;
+    background-color: rgb(209, 231, 244);
+}
+
+/* ========补充======== */
+.xly1 {
+    color: rgb(42, 22, 22);
+}
+
+.xd1 span a:hover {
+    color: aqua;
+}
+
+.xly1:hover {
+    color: skyblue;
+}
+
+.xlce a img {
+    width: 100%;
+    height: 230px;
+}
+
+.xlce h3,
+.xly h3 {
+    font-size: 2em;
+}
+
+.xlce h3 span,
+.xlx h3 span {
+    font-size: 16px;
+}
+
+.xlce a>span {
+    font-size: 12px;
+}
+
+.xlce a:hover .as {
+    color: aqua;
+}
+
+.xlce .jiao {
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    bottom: -15px;
+    right: 50px;
+}
+
+/* ----------线路内容2-------- */
+.xly {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    width: 65%;
+    height: 350px;
+}
+
+.xly a {
+    margin-top: 10px;
+    padding: 5px 10px;
+    width: 100%;
+    display: inline-flex;
+    border-bottom: 2px dotted gray;
+    height: 110px;
+}
+
+
+.xly a img {
+    width: 140px;
+    height: 90px;
+}
+
+.xly1 {
+    padding: 0 15px;
+
+}
+
+.xly .a1 {
+    border-bottom: 0;
+}
+
+/* ---------右半部分----------- */
+.you {
+    width: 292px;
+    height: 400px;
+    margin-left: 28px;
+
+}
+
+.you a img {
+    width: 292px;
+    height: 130px;
+}
+
+.im {
+    margin-bottom: 2px;
+}
+
+/* -----旅游向导-------- */
+.contenttwo {
+    height: 420px;
+    margin: 80px 0;
+    text-align: center;
+}
+
+.contenttwo h1 {
+    margin-bottom: 50px;
+    background: url(../img/tit-line.png) no-repeat 425px 18px;
+}
+
+/* =========图片========= */
+.xdtp {
+    margin-top: 25px;
+}
+
+.xd1 {
+    position: relative;
+    float: left;
+    width: 230px;
+    height: 360px;
+    margin-right: 16px;
+    background-color: aliceblue;
+}
+
+.contenttwo .xdtp .xd1 .sssa {
+    background: url();
+    position: absolute;
+    top: 13px;
+    left: 4px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.xd1>.asss {
+    width: 230px;
+    height: 279px;
+}
+
+.xd1 p {
+    width: 230px;
+
+}
+
+.xd1 span {
+    width: 115px;
+    font-size: 14px;
+    height: 24px;
+    line-height: 27px;
+    float: left;
+    padding-left: 22px;
+    text-align: left;
+    background: url(../img/tg_dot.png) no-repeat 15px 10px;
+}
+
+.xdtp .xd1:nth-of-type(5) {
+    margin-right: 0;
+}
+
+#sp {
+    width: 230px;
+}
+
+/* ------热门推荐----- */
+.content3 {
+    height: 550px;
+    margin-top: 15px;
+}
+
+.content3 h1 {
+    margin: 50px 0px;
+    text-align: center;
+    background: url(../img/tit-line.png) no-repeat 425px 18px;
+}
+
+/* -----图片------ */
+.tutu1 {
+    position: relative;
+    margin-top: 20px;
+}
+
+.tutu1 div,
+.tutu2 div {
+    position: relative;
+    display: inline-block;
+}
+
+.content3 img {
+    position: relative;
+    /* margin-right: 7px; */
+}
+
+/* .content img:nth-of-type(1) {
+    margin-right: 10px;
+} */
+
+.tutu1 .ttt1 img:nth-of-type(1) {
+    width: 473px;
+    height: 230px;
+}
+
+.tutu1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tutu2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tutu1 .ttt1 img:nth-of-type(3) {
+    margin-right: 8px;
+}
+
+.tutu1 .ttt1 img:nth-of-type(4) {
+    margin-right: 0;
+}
+
+.tutu2 img {
+    float: left;
+    width: 230px;
+    height: 230px;
+
+}
+
+.tutu2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.tutu2 img:nth-of-type(5) {
+    margin-right: 0;
+}
+
+/* .tutu2 img:nth-of-type(1) {
+    margin-right: 8px;
+
+} */
+
+.tutu1 a span,
+.tutu2 a span {
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* 游记攻略 */
+.travel {
+    text-align: center;
+    margin-top: 50px px;
+}
+
+.travel h1 {
+    margin-top: 85px;
+    background: url(../img/tit-line.png) no-repeat 425px 18px;
+}
+
+.travel p {
+    height: 30px;
+}
+
+.travel p:nth-of-type(1) {
+    font-size: 18px;
+    color: rgb(80, 80, 85);
+}
+
+.travel p a {
+    font-size: 16px;
+    color: skyblue;
+}
+
+/* -------圆图-------- */
+.radio {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    height: 300px;
+}
+
+.radio div {
+    width: 285px;
+    height: 285px;
+    border-radius: 50%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.radio span {
+    width: 100%;
+    text-align: center;
+    display: block;
+    left: 0px;
+    bottom: 0;
+    position: absolute;
+    background-color: white;
+    z-index: 33;
+    height: 76px;
+}
+
+.radio span a {
+    color: rgb(128, 106, 106);
+}
+
+.radio span a:hover {
+    color: blue;
+}
+
+.radio span a:last-of-type {
+    display: block;
+
+    margin-top: 5px;
+
+    background: url(../img/strategy_pos.png) no-repeat 105px 1px;
+}
+
+/* ========底部========= */
+.foot {
+    margin-top: 100px;
+    width: 100%;
+    height: 280px;
+    background-color: rgb(40, 40, 40);
+}
+
+/* ======版心====== */
+.fbx {
+    width: 80%;
+    height: 220px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+
+
+.fbx>div {
+    width: 510px;
+    margin: 0 5px;
+    /* background-color: antiquewhite; */
+}
+
+.foot .fbx>.fb1 {
+    margin-top: 40px;
+    height: 140px;
+}
+
+/* 一 */
+
+.fb11 {
+    color: white;
+    width: 220px;
+    height: 100%;
+    float: left;
+    padding-left: 20px;
+    /* background-color: beige; */
+}
+
+
+
+.fb11 p {
+    height: 25px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+/* .fb11 h1 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+} */
+
+.fb12 {
+    width: 160px;
+    height: 100%;
+    float: right;
+    color: gray;
+    font-size: 12px;
+    border-right: 1px solid grey;
+    text-align: center;
+    border-right: 2px solid rgba(99, 102, 98, 0.667);
+    /* background-color: antiquewhite; */
+}
+
+.fb2 h3,
+.fb3 h3 {
+    color: rgb(51, 137, 215);
+    padding-left: 15px;
+}
+
+.foot .fbx>.fb2 {
+    margin-top: 40px;
+    height: 140px;
+}
+
+#lll li {
+    padding: 6px 10px 6px 15px;
+    list-style: square;
+    color: white;
+    background: url(../img/tg_dot.png) no-repeat 6px 15px;
+    display: inline-block;
+}
+
+#lll li a {
+    color: white;
+}
+
+#lll li a:hover {
+    color: grey;
+}
+
+.fb2 ul li::marker {
+    color: blue;
+}
+
+.foot .fbx>.fb3 {
+    margin-top: 40px;
+    height: 140px;
+    padding-left: 20px;
+}
+
+.fb3 p {
+    padding-left: 10px;
+    background: url(../img/arrow_bottom.png) no-repeat 1px 16px;
+    margin-top: 10px;
+    height: 24px;
+    line-height: 24px;
+
+}
+
+.fb3 p span {
+    font-size: 20px;
+    color: grey;
+    vertical-align: top;
+}
+
+.fb3 p:nth-of-type(1) {
+    background: url(../img/arrow_bottom.png) no-repeat 1px 7px;
+}
+
+.font {
+    color: gray;
+    text-align: center;
+}
+
+.font a {
+    color: white;
+}
+
+.font a:hover {
+    color: gray
+}
+
+.dddd {
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid gray;
+}
+
+.fb3 {
+    border-left: 1px solid grey;
+}
+
+.dddd {
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1.5px solid black;
+    border-bottom: 1.5px solid gray;
+}
+
+#lang {
+    width: 180px;
+}
+
+.Secondary p:hover {
+    background-color: pink;
+    color: rgb(25, 25, 160);
+}

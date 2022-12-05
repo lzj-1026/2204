@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 100%;
+        }
+
+        .top {
+            width: 100%;
+            height: 50px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: aqua;
+            display: block;
+            width: 50%;
+            float: left;
+        }
+
+        .top>a:nth-of-type(1) {
+            background-color: bisque;
+        }
+
+        .top>a:nth-of-type(2) {
+            background-color: rgb(49, 47, 166);
+        }
+
+        .a:nth-of-type(1) {
+            width: 100%;
+            height: 300px;
+            text-align: center;
+            background-color: blueviolet;
+        }
+
+        .a:nth-of-type(2) {
+            width: 100%;
+            display: none;
+            text-align: center;
+            height: 300px;
+            background-color: rgb(43, 226, 89);
+        }
+
+        .active {
+            font-size: 30px;
+            font-weight: 900;
+            color: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="top">
+            <a href="#" class="active">老大</a>
+            <a href="#">老二</a>
+        </div>
+    </div>
+    <div class="box2">
+        <div class="a">我是老大</div>
+        <div class="a">我是老二</div>
+    </div>
+</body>
+
+</html>
+<script>
+    var a = document.getElementsByTagName('a')
+    var b = document.getElementsByClassName('a')
+    for (i = 0; i < a.length; i++) {
+        a[i].setAttribute('sx', i);
+        a[i].onclick = function () {
+            var sx = this.getAttribute('sx');
+            for (j = 0; j < a.length; j++) {
+                a[j].className = ''
+                a[sx].className = 'active'
+            }
+            for (k = 0; k < b.length; k++) {
+                b[k].style.display = 'none'
+                b[sx].style.display = 'block'
+            }
+        }
+
+
+    }
+</script>

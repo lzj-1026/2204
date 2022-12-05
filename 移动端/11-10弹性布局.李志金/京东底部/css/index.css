@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer span {
+  flex: 1;
+}
+footer span img {
+  width: 100%;
+}

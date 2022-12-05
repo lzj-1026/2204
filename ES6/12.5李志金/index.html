@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+            height: 400px;
+            float: left;
+            margin: 0 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function logd(imgUrl) {
+        return new Promise((resolve, reject) => {
+            var img = new Image();
+            img.src = imgUrl;
+            img.onload = () => {
+                resolve(img)
+            }
+            img.onerror = () => {
+                reject('图片加载失败，请刷新页面')
+            }
+        })
+    }
+    let img1 = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Ffs.img4399.com%2Fnews%2F2021%2F08%2F22%2F9d16b7b9a0861514b282bd846b2bc72d~s550&refer=http%3A%2F%2Ffs.img4399.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672803416&t=2eaf4417b2d5b8359b24a7d8edb1fe31'
+    let img2 = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.huanghelou.cc%2Fzb_users%2Fupload%2F2021%2F03%2F20210307211841_57282.jpg&refer=http%3A%2F%2Fwww.huanghelou.cc&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672803416&t=2e474d6d826cbc854eeb33aab4ed18c6'
+    let img3 = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fbkimg.cdn.bcebos.com%2Fpic%2F71cf3bc79f3df8dc39ad774dc011728b4610285e&refer=http%3A%2F%2Fbkimg.cdn.bcebos.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672803416&t=0ca1c23f342289dc120220142dc724a8'
+    Promise.all([
+        logd(img1),
+        logd(img2),
+        logd(img3),
+    ]).then(els => {
+        els.forEach(item => {
+            document.documentElement.appendChild(item)
+        })
+    }).catch((error) => {
+        console.log('加载超时');
+    })
+</script>

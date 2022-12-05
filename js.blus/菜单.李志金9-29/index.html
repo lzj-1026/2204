@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            display: none;
+            width: 240px;
+            height: 300px;
+            position: absolute;
+            list-style: none;
+            overflow: hidden;
+            box-shadow: 0px 1px 8px -4px;
+            border-radius: 5px;
+        }
+
+        li {
+            width: 230px;
+            line-height: 60px;
+            padding-left: 10px;
+            height: 60px;
+        }
+
+        .list {
+            padding-left: 0;
+            border-left: 10px solid red;
+            background-color: rgb(199, 150, 215);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>返回</li>
+        <li>重新加载</li>
+        <li>另存为(A)...</li>
+        <li>打印(P)...</li>
+        <li>查看网页源代码</li>
+    </ul>
+</body>
+
+</html>
+<script>
+    var li_ = document.querySelectorAll('li')
+    var ul = document.querySelector('ul')
+    document.oncontextmenu = function (e) {
+        // e = e || window.event;
+        ul.style.top = e.clientY + "px";
+        ul.style.left = e.clientX + "px";
+        ul.style.display = "block"
+        return false
+    }
+    ul.onclick = function (e) {
+        // e = e
+        e ? e.stopPropagation() : e.cancelBubble() = true;
+        ul.style.display = "block";
+    }
+    document.onclick = function () {
+        ul.style.display = 'none';
+    }
+    for (var i = 0; i < li_.length; i++) {
+        li_[i].onmouseover = function () {
+            this.className = 'list';
+        }
+        li_[i].onmouseout = function () {
+            this.className = '';
+        }
+    }
+    // ul.onmouseover = function () {
+    //     for (var i = 0; i < li_.length; i++) {
+    //         li_[i].onmouseover = function () {
+    //             for (var j = 0; j < li_.length; j++) {
+    //                 li_[j].className = ''
+
+    //             }
+    //             this.className = 'list'
+    //         }
+    //         li_[i].onmouseout = function () {
+    //             this.className = ''
+    //         }
+    //     }
+    // }
+    // document.onclick = function () {
+    //     ul.style.display = "none";
+    // }
+    // document.onclick = function (e) {
+    //     ul.style.display = 'none';
+    // }
+    // for (var i = 0; i < li_.length; i++) {
+    //     li_[i].onmouseover = function () {
+    //         this.className = 'list';
+    //     }
+    //     li_[i].onmouseout = function () {
+    //         this.className = '';
+    //     }
+
+    // }
+</script>

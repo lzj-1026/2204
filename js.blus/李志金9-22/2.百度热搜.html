@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            /* color: white; */
+
+        }
+
+        .nav {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            box-shadow: 0px 3px 5px 0px black;
+            /* background-color: aqua; */
+        }
+
+        .left {
+            width: 85%;
+            height: 100%;
+            float: left;
+            /* background-color: rgb(28, 97, 158); */
+        }
+
+        .right {
+            width: 15%;
+            height: 100%;
+            float: left;
+            /* background-color: yellowgreen; */
+        }
+
+        .left>span {
+            margin-left: 12px;
+            float: left;
+            color: white;
+            font-size: 13px;
+        }
+
+        .right>span {
+            /* float: right; */
+            margin-right: 10px;
+            color: white;
+            font-size: 13px;
+        }
+
+        .main {
+            width: 70%;
+            height: 840px;
+            margin: 0 auto;
+            overflow: hidden;
+            /* background-color: aqua; */
+        }
+
+        .top {
+            height: 80px;
+            /* background-color: aquamarine; */
+            margin-top: 30px;
+            /* line-height: 80px; */
+        }
+
+        .left1 {
+            width: 50%;
+            float: left;
+            height: 100%;
+        }
+
+        .right1>span {
+            float: left;
+            height: 35px;
+            width: 50px;
+            margin-top: 25px;
+            text-align: center;
+            /* background-color: white; */
+            margin-right: 25px;
+        }
+
+
+        .right1 {
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+
+        .right1>a {
+            display: block;
+            width: 70px;
+            height: 30px;
+            /* color: aliceblue; */
+            margin-right: 5px;
+            font-size: 16px;
+            line-height: 30px;
+            float: left;
+            margin-top: 24px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+
+
+        .re {
+            display: none;
+        }
+
+        .active {
+            background-color: white;
+            width: 70px;
+            height: 30px;
+            color: rgb(241, 89, 13);
+            font-size: 20px;
+        }
+
+        body {
+            background: url(./img/bg.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="nav">
+            <div class="left">
+                <span>新闻</span>
+                <span>hao123</span>
+                <span>地图</span>
+                <span>视频</span>
+                <span>贴吧</span>
+                <span>学术</span>
+                <span>更多</span>
+            </div>
+            <div class="right">
+                <span>百度首页</a></span>
+
+                <span>李志金</span>
+            </div>
+        </div>
+        <div class="main">
+            <div class="top">
+                <div class="left1">
+                    <img src="./img/baiduresou.png" alt="" width="200px" height="70px">
+                </div>
+                <div class="right1">
+                    <a href="#" class="active">首页</a>
+                    <a href="#">热搜</a>
+                    <a href="#">小说</a>
+                    <a href="#">电影</a>
+                    <a href="#">电视剧</a>
+                    <a href="#">汽车</a>
+                    <a href="#">游戏</a>
+                </div>
+                <div class="bottom">
+                    <img src="./img/shouye.png" alt="" width="100%">
+                </div>
+                <div class="bottom "><img src="./img/resou.png" alt="" width="100%"></div>
+                <div class="bottom re"><img src="./img/xiaoshuo.png" alt="" width="100%"></div>
+                <div class="bottom re"><img src="./img/dianying.png" alt="" width="100%"></div>
+                <div class="bottom re"><img src="./img/dianshiju.png" alt="" width="100%"></div>
+                <div class="bottom re"><img src="./img/qiche.png" alt="" width="100%"></div>
+                <div class="bottom re"><img src="./img/youxi.png" alt="" width="100%"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var right_ = document.getElementsByTagName('a');
+    // console.log(right_);
+    var body_ = document.body;
+    var tu_ = document.getElementsByClassName('bottom')
+    for (i = 0; i < right_.length; i++) {
+        right_[i].setAttribute('sx', i);
+
+        right_[i].onclick = function () {
+            var sx = this.getAttribute('sx')
+            for (j = 0; j < right_.length; j++) {
+                right_[j].className = '';
+                // console.log(right_[j]);
+                right_[sx].className = 'active'
+
+            }
+            for (k = 0; k < tu_.length; k++) {
+                tu_[k].style.display = 'none'
+                tu_[sx].style.display = 'block'
+            }
+
+            switch (sx) {
+
+                case '0':
+                case '1':
+                case '2':
+                    body_.style.background = "url('./img/bg.png') no-repeat";
+                    break;
+                case '3':
+                case '4':
+                    body_.style.background = "url('./img/bg2.png') no-repeat";
+                    break;
+                case '5':
+                    body_.style.background = "url('./img/bg3.png') no-repeat";
+                    break;
+                case '6':
+                    body_.style.background = "url('./img/bg4.png') no-repeat";
+                    break;
+            }
+        }
+
+    }
+
+
+
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>选择您的爱好</h3>
+    <ul>
+        <li><input type="checkbox" value="音乐" name="" id="">音乐</li>
+        <li><input type="checkbox" value="登山" name="" id="">登山</li>
+        <li><input type="checkbox" value="游泳" name="" id="">游泳</li>
+        <li><input type="checkbox" value="阅读" name="" id="">阅读</li>
+        <li><input type="checkbox" value="打球" name="" id="">打球</li>
+        <li><input type="checkbox" value="跑步" name="" id="">跑步</li>
+        <li><input type="checkbox" value="其他" name="" id="">其他</li>
+    </ul>
+    <hr>
+    <button onclick="show()">查看我选择的爱好</button>
+    <p class="ah"></p>
+</body>
+
+</html>
+<script>
+    var inp = document.getElementsByTagName('input');
+    var ah = document.getElementsByClassName('ah')[0];
+    function show() {
+        var a = '';
+        for (i = 0; i < inp.length; i++) {
+            if (inp[i].checked == true) {
+                a = a + inp[i].value + '<br>'
+            }
+        }
+        ah.innerHTML = a;
+    }
+
+</script>

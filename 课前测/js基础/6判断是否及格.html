@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // //删除数组的第一个数据不改变原数组
+    // var arr = [1, 2, 3, 4, 5, 6];
+    // var arr_ = arr.slice(1)
+    // console.log(arr_);
+
+    // var arr = [56, 78, 77, 32, 99];
+    // for (var i = 0; i < arr.length; i++) {
+    //     if (arr[i] < 60) {
+    //         // console.log(arr[i]);
+    //         // arr_ = arr.splice(i, 1)
+    //         arr.splice(i, 1)
+    //         var num = arr;
+
+    //     }
+    // }
+    // console.log(num);
+
+
+    //过滤器来判断
+    var arr = [56, 78, 77, 32, 99];
+    var newArr = arr.filter(function (item) {
+        return item >= 60
+    })
+    console.log(newArr);
+</script>

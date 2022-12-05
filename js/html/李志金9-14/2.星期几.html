@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<!-- <script>
+    var year = 2022, month = 10, date = 1;
+    var month = month - 1;
+    var dt = new Date(year, month, date);
+    var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    document.write("2022年10月1日是:", weekDay[dt.getDay()]);
+</script> -->
+
+
+<script>
+    // var date = new Date();
+    // var month = date.getMonth() + 1;
+    //  console.log(month);
+
+
+
+    var time = new Date('2022-10-01');
+    var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    document.write("下个月1号是:", weekDay[time.getDay()]);
+
+
+    document.write('<br><br><br><br><br>')
+</script>
+
+
+
+
+<script>
+    var date = new Date();
+    //年
+    var year = date.getFullYear();
+    //月
+    var month = date.getMonth() + 1;
+
+
+    var time = new Date(year, month, 1);
+
+    var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+    document.write("下个月1号是:", weekDay[time.getDay()]);
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+
+    function test(str) {
+        var zz = /(-)(\w)/g;
+        return str.replace(zz, function ($0, $1, $2) {
+
+            return $2.toUpperCase();
+        });
+    }
+    console.log(test(str));
+
+
+
+
+    var str = 'border-left-color';
+
+    var reg = /(-)(\w)/g;
+    str = str.replace(reg, function (a) {
+        return a.slice(1).toLocaleUpperCase();
+    });
+    console.log(str);
+
+
+
+
+</script>

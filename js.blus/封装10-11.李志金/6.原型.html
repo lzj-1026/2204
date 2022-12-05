@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Show(name, age, address, job) {
+        this.name = name,
+            this.age = age,
+            this.address = address,
+            this.job = job
+    }
+    Show.prototype.show = function () {
+        document.write('姓名:' + this.name + "<br>" + '年龄:' + this.age + '<br>' + '职业:' + this.job + '<br>' + '地址:' + this.address + '<hr>')
+
+    }
+    var arry1 = new Show('马保国', 65, '伦敦', '混元太极掌门人')
+    var arry2 = new Show('老李', 22, 'China', '打假混元太极掌门人')
+    arry1.show();
+    arry2.show();
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //
+
+    // #### 16. 判断一个数组中有几个回文字符串: ['level', 'haha', 'hello', 'abcdcba', 'green', 'nan', 'naan']
+
+    // 回文字符串：倒过来，正过去都是一样的
+
+    // 回文字符串 示例： 'level'  'abcdcba'  'nan'  'naan'
+    var num = ['level', 'haha', 'hello', 'abcdcba', 'green', 'nan', 'naan'];
+    // var num = num.split('').revese('').join('');
+    var index = 0;
+    for (var item of num) {
+        //数组  反转   字符串
+        if (item == item.split('').reverse('').join('')) {
+            index++;
+        }
+
+    }
+    console.log(index);
+    // for (i = 0; i < num.length; i++) {
+    //     for (j = i + 1; j < num.length; j++) 的{
+
+    //     }
+    // }
+</script>

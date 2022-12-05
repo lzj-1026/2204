@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  background-color: #eeeeee;
+}
+header {
+  width: 100%;
+  height: 3rem;
+  background-color: red;
+  padding: 0 2%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  text-align: center;
+  padding-right: 2%;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  flex: 0.5;
+  width: 3rem;
+  height: 2rem;
+}
+header span {
+  flex: 12;
+  font-size: 1.2rem;
+  color: white;
+  line-height: 3rem;
+}
+.box {
+  margin: 0 auto;
+  margin-top: 3rem;
+  max-width: 600px;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+.box .top {
+  display: flex;
+  flex-direction: column;
+}
+.box .top .s1 {
+  width: 100%;
+  height: 3rem;
+  background: url(../img/supchenge.png) no-repeat;
+  background-size: auto;
+  display: flex;
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.box .top .s1 img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.box .top .s2 {
+  height: 4rem;
+  padding-left: 4rem;
+  background: url(../img/position.png) no-repeat 1rem 0.5rem;
+  background-color: white;
+}
+.box .top .s2 P {
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+}
+.box .p1 {
+  height: 2rem;
+  line-height: 2rem;
+  margin-top: 2%;
+  padding-left: 4rem;
+  font-size: 1rem;
+  background: url(../img/gift1.png) no-repeat 1.7rem 0rem;
+  background-size: 2rem;
+  background-color: white;
+}
+.box .mian {
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+}
+.box .mian li {
+  display: flex;
+  padding: 1%;
+  justify-content: space-between;
+  border-bottom: 1px solid #666;
+}
+.box .mian li img {
+  width: 4rem;
+  height: 4rem;
+  flex: 1;
+}
+.box .mian li .m1 {
+  padding: 0 1%;
+  font-size: 1rem;
+  flex: 10;
+}
+.box .mian li span {
+  font-size: 1rem;
+  color: red;
+  flex: 1;
+}
+.box .mian li:nth-of-type(3) {
+  border-bottom: none;
+}
+.box .p2 {
+  background-color: white;
+  padding: 1% 4%;
+  height: 3rem;
+  display: flex;
+  color: #666;
+  flex-direction: column;
+}
+.box .p2 span {
+  display: flex;
+  justify-content: space-between;
+}
+.box .p3 {
+  height: 5rem;
+  padding: 0 1%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding-bottom: 2%;
+}
+.box .p3 .p5 {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4%;
+}
+.box .p3 .p5 span {
+  width: 40%;
+  border: 1px solid #666;
+  text-align: center;
+  display: block;
+}
+.box .p3 .p5 span img {
+  width: 1rem;
+  height: 1rem;
+}
+.box .d1 {
+  height: 8rem;
+  padding: 1%;
+  font-size: 1.2rem;
+  background-color: white;
+  margin: 1% 0;
+}
+.box .d1 p {
+  font-size: 1rem;
+  height: 2rem;
+  line-height: 2rem;
+  color: #666;
+}
+.box .d1 p:nth-of-type(1) {
+  padding: 1%;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.box .d1 p:nth-of-type(1) span {
+  display: block;
+  width: 3rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  border: 1px solid #ccc;
+}
+.box footer {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1%;
+}
+.box footer ul {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #666;
+}
+.box footer ul li {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+}
+.box footer ul li img {
+  width: 8rem;
+  height: 8rem;
+}
+.box footer ul li span {
+  font-size: 1rem;
+  color: red;
+}
+.box footer .ap {
+  display: flex;
+  padding: 1%;
+  justify-content: flex-end;
+}
+.box footer .ap .remove {
+  display: flex;
+  height: 2rem;
+  padding: 1%;
+  width: 4rem;
+  font-size: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px #c95151 solid;
+}

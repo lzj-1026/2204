@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            margin: 40px auto;
+            border-radius: 20px;
+            width: 400px;
+            height: 400px;
+            padding: 40px;
+            background-color: rgb(239, 167, 179, .8);
+        }
+
+        p {
+            margin-top: 20px;
+        }
+
+        input {
+            /* border: 1px solid red; */
+            border-radius: 5px;
+            text-indent: 2em;
+            width: 200px;
+            height: 30px;
+            /* 焦点无边框 */
+            outline: none;
+            color: skyblue;
+            border: none;
+        }
+
+        button {
+            width: 200px;
+            height: 40px;
+            border-radius: 30px;
+            background-color: aqua;
+            margin-top: 50px;
+            margin-left: 60px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p> 用&nbsp;&nbsp;&nbsp;户&nbsp;&nbsp;名: <input type="text" id="inp1">
+            <span style="color: blue;">请输入用户名</span>
+        </p>
+        <p>密 &nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;码：<input type="password" id="inp2">
+            <span style="color: blue;">请输入密码</span>
+        </p>
+        <p> 确认密码：<input type="password" id="inp3">
+            <span style="color: blue;">请确认密码</span>
+        </p>
+        <p>
+            <button>同意协议并注册</button>
+        </p>
+    </div>
+</body>
+
+</html>
+<script>
+    var inp = document.getElementById('inp1')
+    var span = document.getElementsByTagName('span')
+    var inp_ = document.getElementById('inp2')
+    var inp__ = document.getElementById('inp3')
+
+
+    // inp.onfocus = function () {
+    //     // inp.value = '用户名为3-4个文字'
+    // }
+    inp.onblur = function () {
+        var zz = /[\u4e00-\u9fa5]{3,4}/gm;
+        var a = inp.value;
+        var a_ = zz.test(a)
+        if (!a_ || a_ == '') {
+            // span[0].style.color = ""
+            alert('用户名为空，且用户名为三到四位的汉字')
+            span[0].innerHTML = '输入有误'
+            span[0].style.color = "red"
+            // inp.innerHTML = ''
+        } else {
+            span[0].innerHTML = "用户名格式合法"
+            span[0].style.color = "skyblue"
+        }
+    }
+    inp_.onblur = function () {
+        var zz_ = /^\d{6,}$/;
+        var b = inp_.value;
+        var b_ = zz_.test(b)
+        if (!b_ || b_ == '') {
+            // span[0].style.color = ""
+            alert('密码格式不正确，至少输入6位数字组成且密码不能为空')
+            span[1].innerHTML = '输入有误'
+            span[1].style.color = "red"
+            // inp.innerHTML = ''
+        } else {
+            span[1].innerHTML = "用户名格式合法"
+            span[1].style.color = "skyblue"
+        }
+
+    }
+    inp__.onblur = function () {
+        //     var zz_ = /[A-z][0-9]{8,16}/;
+        var c_ = inp__.value;
+        // var c_ = zz__.test(b)
+        if (c_ == inp_.value) {
+            span[2].innerHTML = "两次密码输入一致"
+            span[2].style.color = "skyblue"
+
+
+
+            //         // span[0].style.color = ""
+            //         alert('密码格式不正确，必须为8-16字母数字组成')
+            //         span[2].innerHTML = '输入有误'
+            //         span[2].style.color = "red"
+            //         // inp.innerHTML = ''
+            //     } else {
+            //         span[2].innerHTML = "用户名格式合法"
+            //         span[2].style.color = "skyblue"
+        }
+        else {
+            alert("两次密码不用一致")
+            span[2].innerHTML = "密码不一致，请重新输入"
+        }
+    }
+</script>

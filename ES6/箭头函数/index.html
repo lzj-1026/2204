@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 50px;
+            background-color: greenyellow;
+            line-height: 50px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"> 13:20:46</div>
+    <div class="box1">
+        <span class="a">开始</span>
+        <span class="b">暂停</span>
+    </div>
+</body>
+
+</html>
+<script>
+    function getDate() {
+        let time = new Date;
+        hour = time.getHours();
+        min = time.getMinutes();
+        s = time.getSeconds();
+        str = hour + ":" + min + ":" + s;
+        console.log(str);
+        let box = document.querySelector('.box')
+        box.innerHTML = str
+    }
+    getDate()
+    start()
+    // 开始函数
+    function start() {
+        ds = setInterval(getDate, 1000)//设置定时器
+    }
+    // 结束
+    function stop() {
+        tz = clearInterval(ds)//清除定时器
+    }
+
+    let a = document.querySelector('.a')
+    a.addEventListener('click', function () {
+        start()
+    })
+    let b = document.querySelector('.b')
+    b.addEventListener('click', function () {
+        stop()
+    })
+</script>

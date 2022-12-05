@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            perspective: 1000px;
+        }
+
+        .box {
+            width: 600px;
+            height: 600px;
+            border: 1px solid goldenrod;
+            padding: 20px;
+            position: relative;
+            margin: 50px auto;
+            transform-style: preserve-3d;
+        }
+
+        img {
+            box-shadow: -30px 50px 35px -15px;
+            position: absolute;
+            width: 300px;
+            top: 18%;
+            left: 18%;
+            transform: rotateX(64deg) rotateY(1deg) rotateZ(331deg);
+            height: 482px;
+        }
+
+        img:hover {
+            transition: all 2s;
+            box-shadow: 0 0 0 0;
+            transform: scale(1);
+            /* transform: translate(-50%, -50%); */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="./img/phone.jpg" alt="">
+    </div>
+</body>
+
+</html>

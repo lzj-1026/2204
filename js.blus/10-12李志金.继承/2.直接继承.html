@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Fn() {
+    }
+    Fn.prototype.home = 'Bj'
+    Fn.prototype.money = '1000W'
+
+    function Fd(nb_, name_) {
+        this.nb = nb_;
+        this.name = name_;
+    }
+
+    Fd.prototype = Fn.prototype;
+    Fd.prototype.constructor = Fd;
+
+    var ls = new Fd('ls', 18);
+    console.log(ls.nb, ls.name);
+    console.log('---------');
+
+    Fd.prototype.home = 'Sh'
+    Fd.prototype.money = '1元'
+
+    var Fn_ = new Fn();
+    console.log(Fn_.home, Fn_.money);
+
+
+
+</script>

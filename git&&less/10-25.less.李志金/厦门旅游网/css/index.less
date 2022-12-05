@@ -1,0 +1,859 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: red;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+.box {
+    margin-top: 10px;
+    width: 100%;
+    background: url(../img/bg.jpg) no-repeat;
+}
+
+/*-----页眉-----*/
+.nav {
+    width: 100%;
+    min-width: 1200px;
+    position: relative;
+
+    .n_span {
+        position: absolute;
+        top: 0px;
+        left: 70px;
+    }
+
+    .nav1 {
+        width: 100%;
+        padding-right: 65px;
+        height: 33px;
+        overflow: hidden;
+        background-color: rgb(17, 17, 17);
+
+        .nav2 {
+            float: right;
+            width: 34%;
+            height: 33px;
+            margin: 0 auto;
+
+            li {
+                float: left;
+                width: 19%;
+                height: 33px;
+                display: block;
+                line-height: 40px;
+            }
+
+            :nth-of-type(1) {
+                background: url(../img/lag.png);
+
+                &:hover {
+                    cursor: pointer;
+                    background: url(../img/lag.png) no-repeat -80px -1px;
+                }
+            }
+
+            :nth-of-type(2) {
+                background: url(../img/lag.png) 0px -34px;
+
+                &:hover {
+                    cursor: pointer;
+                    background: url(../img/lag.png) no-repeat -80px -34px;
+                }
+            }
+
+            :nth-of-type(3) {
+                background: url(../img/lag.png) no-repeat 0px -68px;
+
+                &:hover {
+                    cursor: pointer;
+                    background: url(../img/lag.png) no-repeat -80px -68px;
+                }
+            }
+
+            :nth-of-type(4) {
+                background: url(../img/lag.png) no-repeat 0px -102px;
+
+                &:hover {
+                    cursor: pointer;
+                    background: url(../img/lag.png) no-repeat -80px -102px;
+                }
+            }
+
+            :nth-of-type(5) {
+
+                height: 33px;
+                color: blue;
+                line-height: 35px;
+                padding-left: 28px;
+                background: url(../img/b7.png) no-repeat 0px 3px;
+                background-color: rgb(60, 135, 199);
+
+            }
+
+        }
+    }
+}
+
+/*导航栏*/
+.nav3 {
+    min-width: 1200px;
+    width: 100%;
+    height: 71px;
+    background-color: rgb(14, 42, 72);
+
+    .nav4 {
+        width: 60%;
+        height: 71px;
+        display: block;
+        margin: 0 auto;
+
+        li {
+            padding: 23px 10px;
+            position: relative;
+            float: left;
+
+            .Secondary {
+                width: 130px;
+                /* height: 300px; */
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: rgb(0, 138, 206);
+
+                p {
+                    display: block;
+                    height: 35px;
+                    color: white;
+                    padding-left: 20px;
+                    line-height: 35px;
+
+                    &:hover {
+                        background-color: pink;
+                    }
+                }
+
+            }
+
+            &:hover .Secondary {
+                position: absolute;
+                display: block;
+                z-index: 1;
+            }
+        }
+
+
+
+        a {
+            color: white;
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+    }
+}
+
+/*海上花园*/
+.banner {
+    width: 100%;
+    height: 340px;
+    position: relative;
+    background: url(../img/bpic.jpg)no-repeat;
+    background-size: 100% 340px;
+
+    span {
+        right: 310px;
+        top: 35px;
+        position: absolute;
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+    }
+}
+
+/*内容*/
+.content {
+    margin: 10px auto;
+
+    width: 80%;
+
+
+    /*左侧*/
+    .box1 {
+        display: flex;
+        height: 320px;
+
+        /*左侧*/
+        .list1 {
+            width: 20%;
+            background-color: rgb(0, 65, 108);
+            list-style: square;
+
+            li {
+                margin-left: 42px;
+                height: 30px;
+                margin-top: 10px;
+                line-height: 30px;
+                list-style: square;
+
+                &:nth-of-type(1) {
+                    list-style: none;
+                    width: 80%;
+                    height: 50px;
+                    line-height: 50px;
+                    margin-left: 20px;
+                    color: rgb(125, 199, 227);
+                    border-bottom: 2px solid;
+                }
+
+                &::marker {
+                    color: white;
+                }
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+        /*轮播图*/
+        .swiper {
+            width: 550px;
+            height: 320px;
+
+            /* 设置Swiper风格 */
+            --swiper-theme-color: red;
+            /* 单独设置按钮颜色 */
+            --swiper-navigation-color: pink;
+            /* 设置按钮大小 */
+            --swiper-navigation-size: 32px;
+
+            img {
+                width: 550px;
+            }
+
+
+        }
+
+        /*右侧列表*/
+        .list2 {
+            width: 30%;
+            padding: 10px;
+            padding-right: 0;
+
+            /*右侧列表头部*/
+            .title {
+                height: 37px;
+                border-bottom: 3px solid skyblue;
+
+                span {
+                    height: 37px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    border-bottom: 3px solid blue !important;
+                    float: left;
+                }
+
+                i {
+                    font-size: 14px;
+                    height: 30px;
+                    line-height: 30px;
+                    float: right;
+                }
+            }
+
+            /*右侧列表*/
+            .list3 {
+                width: 100%;
+                padding: 10px 0;
+                list-style: none;
+                font-size: 14px;
+                margin: 12px 0px;
+                background-color: white;
+
+                li {
+                    background: url(../img/arrow_bottom.png) no-repeat 7px 10px;
+                    padding-left: 20px;
+                    line-height: 30px;
+                    height: 30px;
+
+                    a {
+                        color: gray;
+
+                        &:hover {
+                            color: red;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*精品线路*/
+    .box2 {
+        width: 100%;
+        height: 400px;
+        display: inline-flex;
+        margin-top: 10px;
+
+        /*左边*/
+        .zuo {
+            width: 867px;
+            margin-right: 28px;
+            height: 100%;
+
+            /*顶部*/
+            .xldeng {
+                background-color: rgb(0, 98, 165);
+                height: 50px;
+                width: 895px;
+                display: inline-flex;
+
+                .jpxl {
+                    width: 30%;
+                    height: 50px;
+                    line-height: 50px;
+                    color: white;
+                    padding-left: 23px;
+                    font-weight: 600;
+
+                }
+
+                .caption {
+                    width: 60%;
+                    height: 50px;
+                    line-height: 50px;
+
+                    span {
+                        margin-left: 20px;
+                        border-radius: 2px;
+                        font-size: 14px;
+                        padding: 5px;
+
+                        &:nth-of-type(1) {
+                            margin-left: -5px;
+                            background-color: rgb(255, 223, 94);
+                        }
+
+                        &:nth-of-type(2) {
+                            background-color: rgb(96, 189, 254);
+                        }
+
+                        &:nth-of-type(3) {
+                            background-color: rgb(156, 226, 128);
+                        }
+
+                        &:nth-of-type(4) {
+                            background-color: rgb(69, 210, 193);
+                        }
+
+                        &:nth-of-type(5) {
+                            background-color: rgb(254, 167, 202);
+                        }
+
+                        &:hover {
+                            background-color: rgb(0, 57, 96);
+                        }
+
+                        a {
+                            color: black;
+                            font-weight: 600;
+                        }
+
+                        &:hover a {
+                            color: white;
+                        }
+                    }
+                }
+
+                .qt {
+                    font-size: 14px;
+                    padding-left: 18px;
+                    line-height: 50px;
+                    color: white;
+                }
+
+            }
+
+            /* -------内容------- */
+            .xlx {
+                height: 350px;
+                width: 895px;
+                background-color: rgb(255, 255, 255);
+                display: inline-flex;
+
+                /* --------线路内容1---------- */
+                .xlce {
+                    width: 35%;
+                    height: 350px;
+
+                    a:nth-of-type(1) {
+                        display: block;
+                        width: 100%;
+                        padding-left: 10px;
+                        height: 120px;
+                        position: relative;
+                        background-color: rgb(209, 231, 244);
+
+                        span {
+                            font-size: 12px;
+                        }
+
+                        h3 {
+                            span {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    a:hover .as {
+                        color: aqua;
+                    }
+
+                    .jiao {
+                        width: 30px;
+                        height: 15px;
+                        position: absolute;
+                        bottom: -15px;
+                        right: 50px;
+                    }
+                }
+
+                /* ----------线路内容2-------- */
+                .xly {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                    background-color: white;
+                    width: 65%;
+                    height: 350px;
+
+                    h3 {
+                        font-size: 2em;
+
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .a1 {
+                        border-bottom: 0;
+                    }
+
+                    a {
+                        margin-top: 10px;
+                        padding: 5px 10px;
+                        width: 100%;
+                        display: inline-flex;
+                        border-bottom: 2px dotted gray;
+                        height: 110px;
+
+                        img {
+                            width: 140px;
+                            height: 90px;
+                        }
+
+                        .xly1 {
+                            padding: 0 15px;
+
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        /*右边*/
+        .you {
+            width: 292px;
+            height: 400px;
+            margin-left: 28px;
+
+            a {
+                img {
+                    width: 292px;
+                    height: 130px;
+                }
+            }
+        }
+    }
+
+    /* -----旅游向导-------- */
+    .contenttwo {
+        height: 420px;
+        margin: 80px 0;
+        text-align: center;
+
+        h1 {
+            margin-bottom: 50px;
+            background: url(../img/tit-line.png) no-repeat 425px 18px;
+        }
+
+        /* =========图片========= */
+        .xdtp {
+            margin-top: 25px;
+
+            .xd1 {
+                position: relative;
+                float: left;
+                width: 230px;
+                height: 360px;
+                margin-right: 16px;
+                background-color: aliceblue;
+
+                .sssa {
+                    background: url();
+                    position: absolute;
+                    top: 13px;
+                    left: 4px;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                .asss {
+                    width: 230px;
+                    height: 279px;
+                }
+
+                p {
+                    width: 230px;
+
+                }
+
+                span {
+                    width: 115px;
+                    font-size: 14px;
+                    height: 24px;
+                    line-height: 27px;
+                    float: left;
+                    padding-left: 22px;
+                    text-align: left;
+                    background: url(../img/tg_dot.png) no-repeat 15px 10px;
+                }
+
+                &:nth-of-type(5) {
+                    margin-right: 0;
+                }
+
+                #sp {
+                    width: 230px;
+                }
+
+
+            }
+        }
+
+    }
+
+    /* ------热门推荐----- */
+    .content3 {
+        height: 550px;
+        margin-top: 15px;
+
+        h1 {
+            margin: 50px 0px;
+            text-align: center;
+            background: url(../img/tit-line.png) no-repeat 425px 18px;
+        }
+
+        .tutu1 {
+            position: relative;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+
+
+            div {
+                position: relative;
+                display: inline-block;
+            }
+
+            a {
+
+                span {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 600;
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                }
+
+                &:hover {
+                    span {
+                        color: red;
+                    }
+                }
+
+            }
+        }
+
+        .tutu2 {
+
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            margin-top: 20px;
+
+            div {
+                position: relative;
+                display: inline-block;
+            }
+
+            img {
+                float: left;
+                width: 230px;
+                height: 230px;
+
+                &:nth-of-type(5) {
+                    margin-right: 0;
+                }
+
+            }
+
+            a {
+                span {
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 600;
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                }
+
+                &:hover {
+                    span {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+
+    /* 游记攻略 */
+    .travel {
+        text-align: center;
+        margin-top: 50px px;
+
+        h1 {
+            margin-top: 85px;
+            background: url(../img/tit-line.png) no-repeat 425px 18px;
+        }
+
+        p {
+            height: 30px;
+
+            &:nth-of-type(1) {
+                font-size: 18px;
+                color: rgb(80, 80, 85);
+            }
+
+            a {
+                font-size: 16px;
+                color: skyblue;
+            }
+        }
+    }
+
+    /*圆圈*/
+    .radio {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        height: 300px;
+
+        div {
+            width: 285px;
+            height: 285px;
+            border-radius: 50%;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: normal;
+            position: relative;
+            overflow: hidden;
+        }
+
+        span {
+            width: 100%;
+            text-align: center;
+            display: block;
+            left: 0px;
+            bottom: 0;
+            position: absolute;
+            background-color: white;
+            z-index: 33;
+            height: 76px;
+
+            a {
+                color: rgb(128, 106, 106);
+
+                &:hover {
+                    color: blue;
+                }
+
+                &:last-of-type {
+                    display: block;
+                    margin-top: 5px;
+                    background: url(../img/strategy_pos.png) no-repeat 105px 1px;
+                }
+            }
+        }
+    }
+}
+
+/* ========底部========= */
+.foot {
+    margin-top: 100px;
+    width: 100%;
+    height: 280px;
+    background-color: rgb(40, 40, 40);
+
+    /* ======版心====== */
+    .fbx {
+        width: 80%;
+        height: 220px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            width: 510px;
+            margin: 0 5px;
+        }
+
+        .fb1 {
+            margin-top: 40px;
+            height: 140px;
+
+            .fb11 {
+                color: white;
+                width: 208px;
+                height: 100%;
+                float: left;
+                padding-left: 20px;
+
+                p {
+                    height: 25px;
+                    letter-spacing: 3px;
+                    font-size: 14px;
+                    line-height: 25px;
+                }
+            }
+
+            .fb12 {
+                width: 160px;
+                height: 100%;
+                float: right;
+                color: gray;
+                font-size: 12px;
+                border-right: 1px solid grey;
+                text-align: center;
+                border-right: 2px solid rgba(99, 102, 98, 0.667);
+            }
+        }
+
+        .fb2 {
+            margin-top: 40px;
+            height: 140px;
+
+            h3 {
+                color: rgb(51, 137, 215);
+                padding-left: 15px;
+            }
+
+            #lll {
+                li {
+                    padding: 6px 10px 6px 15px;
+                    list-style: square;
+                    color: white;
+                    background: url(../img/tg_dot.png) no-repeat 6px 15px;
+                    display: inline-block;
+
+                    a {
+                        color: white;
+
+                        &:hover {
+                            color: grey;
+                        }
+                    }
+
+                    &::marker {
+                        color: blue;
+                    }
+                }
+            }
+        }
+
+        .fb3 {
+            margin-top: 40px;
+            height: 140px;
+            padding-left: 20px;
+            border-left: 1px solid grey;
+
+            p {
+                padding-left: 10px;
+                background: url(../img/arrow_bottom.png) no-repeat 1px 16px;
+                margin-top: 10px;
+                height: 24px;
+                line-height: 24px;
+
+                &:nth-of-type(1) {
+                    background: url(../img/arrow_bottom.png) no-repeat 1px 7px;
+                }
+
+
+                span {
+                    font-size: 20px;
+                    color: grey;
+                    vertical-align: top;
+                }
+
+            }
+        }
+    }
+
+    .font {
+        color: gray;
+        text-align: center;
+
+        a {
+            color: white;
+
+            &:hover {
+                color: gray
+            }
+        }
+    }
+
+    .dddd {
+        height: 1px;
+        width: 80%;
+        margin: 0 auto;
+        border-top: 1.5px solid black;
+        border-bottom: 1.5px solid gray;
+    }
+
+
+}
+
+#lang {
+    width: 180px;
+}

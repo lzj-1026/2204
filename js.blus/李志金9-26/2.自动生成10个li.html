@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #000000;
+            position: absolute;
+            left: 0px;
+            top: 40px;
+            font-size: 40px;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="btn1" type="button" value="自动生成10个小方块" />
+
+</body>
+
+</html>
+<script>
+    window.onload = function () {
+        var b_ = document.getElementById('btn1');
+        var num = 10;
+        var str = '';
+        var arr = ['red', 'blue', 'yellow', 'green'];
+        for (var i = 0; i < num; i++) {
+            str = str + '<div>' + (i + 1) + '</div>';
+        }
+        b_.onclick = function () {
+            document.body.innerHTML += str;
+            var b__ = document.getElementsByTagName('div');
+            for (var s = 0; s < num; s++) {
+                b__[s].style.left = s * (10 + 50) + 'px';
+                b__[s].style.backgroundColor = arr[s % 4];
+            }
+        }
+    }
+</script>

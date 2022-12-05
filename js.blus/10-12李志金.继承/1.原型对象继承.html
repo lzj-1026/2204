@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Fn() {
+        this.home = 'Bj'
+        this.money = '1000W'
+    }
+
+    function Fd(nb_, name_) {
+        this.nb = nb_;
+        this.name = name_;
+
+    }
+
+    //得到fn数据
+    Fd.prototype = new Fn();
+
+
+    //修改原型链
+    Fd.prototype.constructor = Fd;
+    var ls = new Fd('ls', 18);
+    console.log(ls.nb, ls.name);
+    console.log('---------');
+    console.log(ls.money, ls.home);
+    console.log('---------');
+    console.log(ls.constructor);
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function Fn() {
+    }
+    Fn.prototype.home = 'Bj'
+    Fn.prototype.money = '1000W'
+
+    //创建一个空对象  第三者
+
+    function Kong() { }
+    Kong.prototype = Fn.prototype;
+
+    var kong = new Kong();
+
+    console.log(kong.home, kong.money);
+
+
+    function Fd(nb_, name_) {
+        this.nb = nb_;
+        this.name = name_;
+    }
+
+    Fd.prototype = new Kong();
+
+
+
+    Fd.prototype.constructor = Fd;
+    var ls = new Fd('ls', 18);
+    console.log(ls.nb, ls.name, ls.home, ls.money);
+    console.log('---------');
+    // console.log(ls.money, ls.home);
+</script>

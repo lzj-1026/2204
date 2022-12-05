@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<script>
+    // 就近原则 向上取值  
+    function Person() {
+
+    }
+    Person.prototype.sayname = function () {
+        console.log('我是person原型对象的sayname2')
+
+    }
+    Object.prototype.sayname = function () {
+        console.log('我是object原型对象的sayname3')
+
+    }
+    var p1 = new Person();
+    p1.sayname = function () {
+        console.log('我是person实例对象对象的sayname1')
+    }
+
+    p1.sayname();
+</script>

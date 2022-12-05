@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        #menu {
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background-color: whitesmoke;
+            padding: 20px 0;
+            display: none;
+        }
+
+        li {
+            width: 270px;
+            height: 60px;
+            padding-left: 10px;
+            line-height: 60px;
+        }
+
+        .list {
+            padding-left: 0;
+            border-left: 10px solid red;
+            background-color: violet;
+            font-size: 18px;
+            font-weight: 900;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="menu">
+        <li class="list">返回</li>
+        <li>前进</li>
+        <li>后退</li>
+        <li>刷新</li>
+    </ul>
+</body>
+
+</html>
+<script>
+    var ul_ = document.getElementById("menu")
+    var li_ = document.getElementsByTagName('li')
+    document.oncontextmenu = function (e) {
+        ul_.style.top = e.clientY + "px";
+        ul_.style.left = e.clientX + "px";
+        ul_.style.display = "block";
+        return false
+    }
+    ul_.onclick = function () {
+        e ? e.stopPropagation() : e.cancelBubble() = true;
+        ul.style.display = "block";
+    }
+    document.onclick = function () {
+        ul_.style.display = "none";
+    }
+    for (var i = 0; i < li_.length; i++) {
+        li_[i].onmouseover = function () {
+            this.className = "list"
+        }
+        li_[i].onmouseout = function () {
+            this.className = ""
+        }
+    }
+</script>

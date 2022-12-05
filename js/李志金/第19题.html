@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // // //#### 19. 加横线
+    // // // 把字符串：'123456789101112'
+    // // //   变为：'123-456-789-101-112'
+    // // var str = '123456789101112';
+    // // for (i = 0; i < str.length; i++) {
+    // //     var str = str.slice(0, 3)
+    // //     // var str1 = str.slice(3, 6)
+    // //     console.log(str);
+    // //     // console.log(str1);
+    // // }
+    // str1 = str.slice(3, 6)
+    // // str2 = str.slice(6, 9)
+    // // str3 = str.slice(9, 12)
+    // // str = str1 + str2 + str3
+    // console.log(str);
+
+    var str = '123456789101112';
+    var a = []
+    for (i = 0; i < str.length; i += 3) {
+        for (j = i + 2; j < str.length; j += 3) {
+            // 下标  找到下标
+            console.log(i, j);
+            a.push(str.substring(i, j + 1));
+            break;
+        }
+    } str = a.join('-')
+    console.log(str);
+</script>

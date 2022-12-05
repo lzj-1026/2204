@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border: 1px solid gray;
+            margin: 40px auto;
+            font-size: 15px;
+            color: gray;
+
+        }
+
+
+        td {
+            height: 50px;
+            line-height: 50px;
+        }
+
+        #d1 {
+            height: 30px;
+            line-height: 30px;
+
+            background-color: rgb(247, 247, 247);
+        }
+
+        .r1 {
+            text-indent: 20px;
+        }
+
+        .d2 {
+            text-align: right;
+            width: 35%;
+        }
+
+        input {
+            width: 250px;
+            height: 35px;
+            border: 0px;
+            border: 1px solid rgb(170, 168, 168);
+
+            outline: none;
+        }
+
+        span {
+            color: red;
+        }
+
+        .s1 {
+            width: 80px;
+            height: 30px;
+        }
+
+        .it {
+            width: 10px;
+            height: 10px;
+        }
+
+        button {
+            width: 240px;
+            height: 34px;
+            border: 0;
+            color: aliceblue;
+            background-color: red;
+        }
+
+        #i1 {
+            background: url(./img/one4.jpg) no-repeat 230px center;
+        }
+
+        #i2 {
+            background: url(./img/one5.jpg)no-repeat 230px center;
+        }
+
+        #i3 {
+            background: url(./img/one5.jpg)no-repeat 230px center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <table width="1000" border="0px" cellspacing="0">
+            <tr class="r1">
+                <td id="d1" colspan="2">账户信息</td>
+            </tr>
+            <tr>
+                <td class="d2"><span>*</span><label for="i1">用户名：</label></td>
+
+                <td><input type="text" placeholder="请输入账户" id="i1"></td>
+            </tr>
+            <tr>
+                <td class="d2"><span>*</span><label for="i2">请设置密码：</label></td>
+                <td><input type="password" name="" id="i2" placeholder="请设置您的密码"></td>
+            </tr>
+            <tr>
+                <td class="d2"><span>*</span><label for="i3">请确认密码：</label></td>
+                <td><input type="password" name="" id="i3" placeholder="请确认您的密码"></td>
+            </tr>
+
+
+            <tr class="r1">
+                <td id="d1" colspan="2">联系人信息</td>
+            </tr>
+            <tr>
+                <td class="d2"><span>*</span><label for="i4">联系人姓名：</label></td>
+
+                <td><input type="text" id="i4"></td>
+            </tr>
+            <tr>
+                <td class="d2"><span>*</span>所在部门：</td>
+                <td>
+
+                    <select name="" id="" class="s1">
+                        <option value="">请选择</option>
+                        <option value="">小卖部</option>
+                        <option value="">售后部</option>
+                        <option value="">创作部</option>
+                        <option value="">瞎玩部</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="d2"><span>*</span><label for="i5">固定号码：</label></td>
+                <td><input type="password" name="" id="i5" placeholder="请输入11位手机号码"></td>
+            </tr>
+            <tr class="r1">
+                <td id="d1" colspan="2">公司信息</td>
+            </tr>
+            <tr>
+                <td class="d2"><span>*</span><label for="i6">公司名称：</label></td>
+
+                <td><input type="text" id="i6"></td>
+            </tr>
+
+            <tr>
+                <td class="d2"><span>*</span>购买类型/用途：</td>
+                <td>
+                    <input type="checkbox" name="" id="i7" class="it">
+                    <label for="i7">it设备</label>
+                    <input type="checkbox" name="" id="i8" class="it">
+                    <label for="i8">通讯设备</label>
+                    <input type="checkbox" name="" id="i9" class="it">
+                    <label for="i9">办公用品耗材</label>
+                    <input type="checkbox" name="" id="i10" class="it">
+                    <label for="i10">大家电</label>
+                    <input type="checkbox" name="" id="i11" class="it">
+                    <label for="i11">政府项目</label>
+                    <input type="checkbox" name="" id="i12" class="it">
+                    <label for="i12">礼品</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button>立即注册</button></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

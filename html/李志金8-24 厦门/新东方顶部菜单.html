@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            height: 35px;
+            width: 1200px;
+            position: relative;
+            padding-left: 20px;
+            background-color: rgb(238, 238, 238);
+        }
+
+        ul {
+            height: 35px;
+
+            padding: 0;
+            float: right;
+            padding-right: 84px;
+        }
+
+        li {
+            height: 35px;
+            margin: 0px 8px;
+            line-height: 35px;
+            color: gray;
+
+            display: inline-block;
+        }
+
+        .gang {
+            width: 1px;
+            height: 10px;
+            margin: 1px 0;
+            /* margin-top: 1px; */
+            background-color: rgb(120, 112, 112);
+        }
+
+        .nav2 {
+            width: 225px;
+            padding: 8px;
+            height: 225px;
+            top: 26px;
+            right: 93px;
+            font-size: 15px;
+            background-color: rgba(213, 210, 212, 22%);
+            border: 1px solid rgb(212, 209, 209);
+            position: absolute;
+        }
+
+        p {
+
+            color: gray;
+
+            padding: 5px;
+            border-bottom: 1px solid rgb(212, 205, 205);
+            line-height: 28px;
+        }
+
+        a {
+            color: gray;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: pink;
+        }
+
+        .dd {
+            border-bottom: none;
+        }
+
+        ul li:last-of-type {
+            padding-right: 10px;
+            background: url(./img/open_icon.gif) no-repeat 65px center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <img src="./img/logo.gif" alt="">
+        <ul>
+            <li><a href="#">购物车</a></li>
+            <li class="gang"></li>
+            <li><a href="#">优惠卷</a></li>
+            <li class="gang"></li>
+            <li><a href="#">快速注卡</a></li>
+            <li class="gang"></li>
+            <li><a href="#">各地购课</a></li>
+            <li class="gang"></li>
+            <li><a href="#">手机报</a></li>
+            <li class="gang"></li>
+            <li><a href="#">网站导航</a></li>
+        </ul>
+        <div class="nav2">
+            <p> <a href="#"><span>托福</span>&nbsp;&nbsp;<span>雅思</span>&nbsp;&nbsp;<span>考研</span>&nbsp;&nbsp;<span>职称英语</span>&nbsp;&nbsp;
+                    <span>初中</span>&nbsp;&nbsp;<span>英语</span></a>
+            </p>
+            <p>
+                <span>网络课堂</span>&nbsp;&nbsp;<span>资讯中心</span>&nbsp;&nbsp;<span>知识堂</span><span>大师讲坛
+                </span>&nbsp;&nbsp;<span>学习论坛</span>&nbsp;&nbsp;<span>学词</span>&nbsp;&nbsp;<br><span>考研搜校</span>
+            </p>
+            <p class="dd"> <span>托福</span>&nbsp;&nbsp;<span>雅思</span>&nbsp;&nbsp;<span>考研</span></p>
+
+        </div>
+    </div>
+</body>
+
+</html>

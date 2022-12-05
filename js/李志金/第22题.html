@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //#### 22.删除假值:删除数组中的所有假值，得到一个所有值为真值的新数组 
+
+    // ​		在JavaScript中，假值有`false`、`null`、`0`、`""`、`undefined` 和 `NaN`。
+
+    // ​		当前数组为：[null, undefined, true, false, 'hah', 'nihao', 0, 18, NaN]；
+
+    var num = [null, undefined, true, false, 'hah', 'nihao', 0, 18, NaN]
+    var num1 = num.filter(function (b) {
+        return Boolean(b)
+    })
+    console.log(num1);
+</script>

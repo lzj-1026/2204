@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3619076_ad6fjprdtvp.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 80%;
+            text-align: center;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        .box>span {
+            width: 150px;
+            font-size: 36px;
+            height: 150px;
+            display: inline-block;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 100px;
+            background-color: aqua;
+            border-radius: 50%;
+            position: relative;
+        }
+
+
+
+        div>span:nth-of-type(1) {
+            border: 3px solid green;
+            background-color: rgb(13, 195, 146);
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            z-index: 3;
+        }
+
+        div>span:hover {
+            transition: all 2s;
+            z-index: 999 !important;
+            transform: scale3d(2, 2, 1);
+        }
+
+        div>span:nth-of-type(2) {
+            border: 3px solid tomato;
+            background-color: rgb(234, 81, 128);
+            position: absolute;
+            top: 0px;
+            left: 120px;
+            z-index: 5;
+
+        }
+
+        div>span:nth-of-type(3) {
+            border: 3px solid skyblue;
+            background-color: rgb(91, 194, 230);
+            position: absolute;
+            top: 0px;
+            left: 230px;
+            z-index: 3;
+
+        }
+
+        div>span:nth-of-type(4) {
+            border: 3px solid gray;
+            background-color: rgb(241, 196, 82);
+            position: absolute;
+            top: 0px;
+            left: 340px;
+            z-index: 4;
+
+
+        }
+
+        div>span:nth-of-type(5) {
+            border: 3px solid palevioletred;
+            background-color: rgba(222, 117, 199, 95%);
+            position: absolute;
+            top: 0px;
+            left: 450px;
+            z-index: 5;
+        }
+
+        .box>span>span {
+            position: absolute;
+            top: 40%;
+            left: 29%;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <span class="iconfont icon-home2 ">
+            <span>HOME</span>
+        </span>
+        <span class="iconfont icon-phone">
+            <span>HOME</span>
+        </span>
+        <span class="iconfont icon-Wi-Fi">
+            <span>HOME</span>
+        </span>
+        <span class="iconfont icon-shezhi">
+            <br>
+            <span>HOME</span>
+        </span>
+        <span class="iconfont icon-twitter">
+            <span>HOME</span>
+        </span>
+    </div>
+</body>
+
+</html>

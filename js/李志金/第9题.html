@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //把数组[1,0,2,3] 变为 ['1', '|', '0', '|', '2', '|', '3']
+    var num = [1, 0, 2, 3];
+    num = num.join('|')
+    console.log(num);
+    const text = num;
+    const chart = [...text]
+    console.log(chart);
+    for (i = 0; i < num.length; i++) {
+        console.log(num[i]);
+        // num1 = num.split('')
+    }
+    // var num1 = num - 0;
+    console.log(num1);
+
+    console.log(typeof num);
+    // console.log();
+</script>

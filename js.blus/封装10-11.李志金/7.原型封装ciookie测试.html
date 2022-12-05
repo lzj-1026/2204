@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script src="./myCookie.js"></script>
+<script>
+    var cookie = new Cookie();
+    cookie.setCookie('name', '老李')
+    cookie.setCookie('age', 88)
+    cookie.setCookie('job', '程序员')
+    var name = cookie.getCookie('name')
+    var age = cookie.getCookie('age')
+    var job = cookie.getCookie('job')
+    document.write(name)
+    document.write(age)
+    document.write(job)
+
+    cookie.removeCookie('job')
+    // cookie.clearCookie()
+
+
+</script>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            perspective: 500px;
+        }
+
+        ul {
+            transform-style: preserve-3d;
+            width: 200px;
+            height: 200px;
+            list-style: none;
+            position: relative;
+            margin: 150px auto;
+            animation: s 1s infinite;
+            /* transform: rotateX(2deg); */
+            transform: rotate3d(1, 0, 0, 2deg);
+        }
+
+        li {
+            width: 200px;
+            height: 200px;
+            border: 1px dashed gray;
+            position: absolute;
+
+
+        }
+
+        li:nth-of-type(1) {
+            transform: translateZ(-100px);
+            background-color: rgba(95, 244, 130, 0.4);
+        }
+
+        li:nth-of-type(2) {
+            transform: translateZ(100px);
+            background-color: rgba(215, 123, 243, 0.4);
+        }
+
+        li:nth-of-type(3) {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: rgba(50, 219, 224, 0.6);
+        }
+
+        li:nth-of-type(4) {
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: rgba(210, 71, 64, 0.44);
+        }
+
+        li:nth-of-type(5) {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: rgba(221, 162, 78, 0.2);
+        }
+
+        li:nth-of-type(6) {
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: rgba(217, 99, 134, 0.3);
+        }
+
+        .box {
+            width: 50px;
+            height: 50px;
+            top: 50%;
+            left: 50%;
+            background-color: green;
+            border: none;
+            animation: a 1s infinite;
+            transform: translate(-50%, -50%) rotate(135deg);
+            position: absolute;
+
+
+        }
+
+        .box::before {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transform: translate(-25px, 0);
+            background-color: green;
+        }
+
+        .box::after {
+            position: absolute;
+            content: "";
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transform: translate(0, 25px);
+            background-color: green;
+        }
+
+
+        @keyframes a {
+            0% {
+
+                transform: translate(-50%, -50%) rotateY(0deg) rotateX(0deg) rotateZ(0deg) rotate(135deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotateY(999999deg) rotateX(0deg) rotateZ(0deg) rotate(135deg);
+            }
+
+        }
+
+        @keyframes s {
+            form {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+
+            to {
+                transform: rotateX(0deg) rotateY(-6666deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li class="box"></li>
+    </ul>
+</body>
+
+</html>

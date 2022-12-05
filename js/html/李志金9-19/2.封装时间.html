@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 200px;
+            position: relative;
+        }
+
+        button {
+            left: 50%;
+            top: 50%;
+            width: 100px;
+            height: 30px;
+            font-size: 20px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="time()">北京时间</button>
+</body>
+
+</html>
+<script>
+    function time() {
+        var date = new Date();
+        //获取年
+        var year = date.getFullYear();
+        //获取月
+        var month = date.getMonth() + 1;
+        month = month < 10 ? '0' + month : month;
+        //获取日
+        var day = date.getDate();
+        day = day < 10 ? '0' + day : day;
+        //获取时
+        var hour = date.getHours();
+        hour = hour < 10 ? '0' + hour : hour;
+        //分
+        var m = date.getMinutes();
+        m = m < 10 ? '0' + m : m;
+        //秒
+        var s = date.getSeconds();
+        s = s < 10 ? '0' + s : s;
+        //整合
+
+        var time_ = year + '-' + month + '-' + day + hour + ':' + m + ':' + s;
+        alert(time_)
+
+    } gfgg
+</script>

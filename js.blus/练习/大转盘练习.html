@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 500px;
+            height: 500px;
+            list-style: none;
+        }
+
+        li {
+            width: 100px;
+            height: 100px;
+            background-color: yellowgreen;
+            float: left;
+            margin: 20px;
+        }
+
+        .list {
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="list">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>
+            <button id="a">开始</button>
+            <button id="b">结束</button>
+        </li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+</body>
+
+</html>
+<script>
+    var a = document.getElementById('a')
+    var b = document.getElementById("b")
+    var arr = [0, 1, 2, 3, 5, 6, 7, 8,]
+    var lis = document.getElementsByTagName('li')
+    var num = 0;
+    var timer;
+    a.onclick = function () {
+        clearInterval(timer)
+        timer = setInterval(function () {
+            for (var i = 0; i < arr.length; i++) {
+                lis[arr[i]].className = ''
+            }
+            num++;
+            if (num > 7) {
+                num = 0
+            }
+            lis[arr[num]].className = "list"
+        })
+        b.onclick = function () {
+            clearInterval(timer)
+        }
+    }
+</script>

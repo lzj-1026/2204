@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免费抢鲜体验</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        form {
+            margin: 40px auto;
+            width: 312px;
+            height: 358px;
+            color: whitesmoke;
+            font-size: 14px;
+            border: 0;
+            padding: 1px;
+            background: url(./img/bg.jpg)no-repeat;
+        }
+
+        li {
+            list-style: none;
+            height: 35px;
+        }
+
+        span {
+            color: red;
+        }
+
+        input {
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid gray;
+        }
+
+        ul {
+            margin-top: 100px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        select {
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .c {
+
+            background: url(./img/btn.jpg)no-repeat 55px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+
+        <ul>
+            <li><span>*</span>&nbsp;姓名：<input type="text"></li>
+            <li><span>*</span>&nbsp;邮箱：<input type="text"></li>
+            <li><span>*</span>&nbsp;电话：<input type="text"></li>
+            <li>性别：
+                <select name="" id="">
+                    <option value="">请选择</option>
+                    <option value="" selected>男</option>
+                    <option value="">女</option>
+                </select>
+            </li>
+            <li>年龄：
+                <select name="" id="">
+                    <option value="">请选择</option>
+                    <option value="">99</option>
+                    <option value="">188</option>
+                    <option value="" selected>388</option>
+                </select>
+            </li>
+            <li class="c"></li>
+        </ul>
+    </form>
+
+</body>
+
+</html>

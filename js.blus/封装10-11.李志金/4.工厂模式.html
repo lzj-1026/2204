@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //注意传参顺序
+    function show_(name, age, address, job) {
+        var arry = {
+
+            age: age, name: name,
+            job: job,
+            address: address,
+            show: function () {
+                document.write('姓名:' + this.name + "<br>" + '年龄:' + this.age + '<br>' + '职业:' + this.job + '<br>' + '地址:' + this.address + '<hr>')
+
+            }
+
+        }
+        return arry;
+    }
+    var arry1 = show_('马保国', 65, '伦敦', '混元太极掌门人')
+    var arry2 = show_('老李', 22, 'China', '打假混元太极掌门人')
+    arry1.show();
+    arry2.show();
+    // function creat_user(name, age, address, job) {
+    //     var user = new Object();
+    //     user.name = name,
+    //         user.age = age,
+    //         user.address = address,
+    //         user.job = job,
+    //         user.show = function () {
+    //             var str = '姓名：' + this.name + '<br>年龄：' + this.age + '<br>职业：' + this.job + '<br>地址：' + this.address + '<hr>';
+    //             document.write(str);
+    //         }
+
+    //     return user;
+    // }
+
+    // var user1 = creat_user('马保国', 68, '伦敦', '传武骗子');
+    // var user2 = creat_user('聂枭', 48, '犄角格拉', '成功学骗子');
+    // user1.show();
+    // user2.show();
+</script>

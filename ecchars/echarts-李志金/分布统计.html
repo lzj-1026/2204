@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src="./js/echarts.min.js"></script>
+    <style>
+        #a {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            /* background-color: pink; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="a"></div>
+</body>
+
+</html>
+<script src="./js/echarts.min.js"></script>
+<script>
+    let my = echarts.init(document.getElementById('a'))
+    let option = {
+        title: {
+            text: '人口分布图'
+        },
+        color: ["rgb(44,105,245)", "rgb(125,201,162)", "rgb(221,141,134)", "rgb(241,162,132)", "rgb(69,146,243)", "rgb(173,227,187)", "rgb(99,193,229)", "rgb(74,156,247)"],
+        legend: {
+            top: 'bottom'
+        },
+
+        series: [
+
+            {
+
+                name: '人口分布图',
+                type: 'pie',
+                radius: [20, 180],
+                center: ['50%', '50%'],
+                roseType: 'area',
+                itemStyle: {
+                    borderRadius: 5
+                },
+                data: [
+                    {
+                        value: 20, name: '云南', label: {
+                            fontSize: 20
+                        }
+                    },
+                    {
+                        value: 30, name: '北京', label: {
+                            fontSize: 20
+                        }
+                    },
+                    {
+                        value: 24, name: '山东', label: {
+                            fontSize: 20
+                        }
+                    },
+                    {
+                        value: 30, name: '河北', label: {
+                            fontSize: 20
+                        }
+                    },
+                    {
+                        value: 22, name: '江苏', label: {
+                            fontSize: 20
+                        }
+                    },
+                    {
+                        value: 30, name: '浙江', label: {
+                            fontSize: 20
+                        }
+                    },
+                    {
+                        value: 34, name: '四川', label: {
+                            fontSize: 20
+                        }
+                    },
+                    {
+                        value: 40, name: '河南', label: {
+                            fontSize: 20
+                        }
+                    }
+                ]
+            }
+        ]
+    };
+    my.setOption(option)
+</script>

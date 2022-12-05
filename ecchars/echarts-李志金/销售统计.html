@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <script src="./js/echarts.min.js"></script>
+    <style>
+        #a {
+            width: 800px;
+            height: 500px;
+            margin: 0 auto;
+            /* background-color: pink; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="a"></div>
+</body>
+
+</html>
+<script src="./js/echarts.min.js"></script>
+<script>
+    let my = echarts.init(document.getElementById('a'))
+    let option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'line'
+            }
+        },
+        legend: {
+            right: '10%',
+            textStyle: {
+                color: "pink"
+            }
+        },
+        title: {
+            text: '销售额统计',
+        },
+        xAxis: {
+            boundaryGap: false,
+            type: "category",
+            data: ['1月', '3月', '5月', '7月', '9月', '11月'],
+            max: 6,
+        },
+        yAxis: {
+            type: 'value',
+            interval: 30,
+            splitNumber: 1,
+            minInterval: 30,
+            maxInterval: 30,
+        },
+        grid: {
+            containLabel: true,
+            show: true
+        },
+        series: [
+            {
+                type: 'line',
+                color: 'blue',
+                symbol: 'circle',
+                stack: 'Total',
+                name: '预期销售额',
+                smooth: true,
+                data: data.year[0],
+                emphasis: {
+                    focus: 'series'
+                },
+            },
+            {
+                type: 'line',
+                symbol: 'circle',
+                color: 'red',
+                name: '实际销售额',
+                stack: 'Total',
+                data: data.year[1],
+                smooth: true,
+                emphasis: {
+                    focus: 'series'
+                },
+            }
+        ]
+    };
+    my.setOption(option)
+</script>

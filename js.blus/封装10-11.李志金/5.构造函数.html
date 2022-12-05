@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //将属性方法赋予给this对象
+    //无return  返回值  高效率
+
+    //构造函数  首字母大写
+    function Show_(name, age, address, job) {
+        this.name = name,
+            this.age = age,
+            this.job = job,
+            this.address = address,
+            this.show = function () {
+                document.write('姓名:' + this.name + "<br>" + '年龄:' + this.age + '<br>' + '职业:' + this.job + '<br>' + '地址:' + this.address + '<hr>')
+            }
+    }
+    var arry1 = new Show_('马保国', 65, '伦敦', '混元太极掌门人')
+    var arry2 = new Show_('老李', 22, 'China', '打假混元太极掌门人')
+    arry1.show();
+    arry2.show();
+
+
+
+    // ——————————————————————————————————
+
+    // function Creat_user(name, age, address, job) {
+    //     this.name = name,
+    //         this.age = age,
+    //         this.address = address,
+    //         this.job = job,
+    //         this.show = function () {
+    //             var str = '姓名：' + this.name + '<br>' + '年龄:' + this.age + '<br>' + '职业:' + this.job + '<br>' +
+    //                 '地址:' + this.address + '<hr>';
+    //             document.write(str);
+    //         }
+    // }
+
+    // var user1 = new Creat_user('马保国', 68, '伦敦', '传武骗子');
+    // var user2 = new Creat_user('聂枭', 48, '犄角格拉', '成功学骗子');
+    // user1.show();
+    // user2.show();
+
+    // console.log(user1 instanceof Creat_user);
+</script>

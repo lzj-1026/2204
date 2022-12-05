@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .jf-hd {
+            padding-bottom: 8px;
+            border-bottom: 2px solid #E64E3E;
+            font-family: "Microsoft YaHei", "微软雅黑", "黑体";
+            color: #e64e3e;
+            font-size: 16px;
+            font-weight: normal;
+            margin: 40px 20px;
+        }
+
+        ul {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        ul::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .box>li {
+            width: 250px;
+            height: 500px;
+            padding: 15px 20px;
+            box-sizing: border-box;
+            border: 1px solid #999;
+            list-style: none;
+            float: left;
+            margin-left: 40px;
+            margin-bottom: 40px;
+
+        }
+
+        .box>li>img {
+            width: 205px;
+            height: 380px;
+            text-align: center;
+
+        }
+
+        .box>li>p {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .over {
+            width: 550px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 5px;
+            color: white;
+            font-size: 14px;
+            background-color: rgb(44, 129, 111);
+            margin: 20px auto;
+        }
+
+        .jf-hd>span:nth-child(2) {
+            font-size: 12px;
+            margin-left: 15px;
+            color: #888;
+        }
+
+        .jf-hd span.fc1 {
+            color: #E64E3E;
+        }
+
+
+        .loding {
+            width: 30px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="jf-hd">
+        <span></span>积分商城<span><span class="fc1">100</span>彩贝=¥<span class="fc1">1.00</span>元</span>
+    </h2>
+
+
+    <!-- <ul class="box">
+        <li>
+            <img src="./img/pbl/1.jpg" alt="" class="pic">
+            <p class="title">布洛克潮鞋，配以欧美潮流服饰，色彩丰富的穿着，尽显男人潮流品味</p>
+        </li>
+        <li>
+            <img src="./img/pbl/2.jpg" alt="" class="pic">
+
+            <p class="title">欧美时尚搭配，无论是朋友聚会，逛街都是焦点</p>
+        </li>
+        <li>
+            <img src="./img/pbl/3.jpg" alt="" class="pic">
+            <p class="title">女神的婚纱季，新款婚纱，高端定制！</p>
+        </li> 
+        <li>
+            <img src="./img/pbl/4.jpg" alt="" class="pic">
+            <p class="title">美尔雅大牌羊毛单西搭配同色休闲裤 色彩统一 品位立显</p>
+        </li>
+    </ul> -->
+    <img class="loding" src="./img/loding.gif" alt="">
+</body>
+
+</html>
+<script>
+    //页面进行加载 
+    window.onload = function () {
+        setTimeout(getData, 1000)
+    }
+    //ajax请求数据
+    function getData() {
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+        ajax_.open('get', './data.json');
+        ajax_.send();
+        ajax_.onreadystatechange = function () {
+            if (ajax_.readyState == 4) {
+                if (ajax_.status == 200) {
+                    arr = JSON.parse(ajax_.responseText).data;
+                    show();
+                }
+            }
+        }
+    }
+    //index   起始下标
+    var index = -1;
+    var body = document.getElementsByTagName('body')[0];
+    var flg = true;//开关
+    var arr = []
+    function show() {
+        //节流阀
+        if (flg) {
+            index++;
+            if (index >= arr.length) {
+                var div_ = document.createElement('div');
+                div_.className = 'over'
+                div_.innerHTML = '数据已加载完毕'
+                body.appendChild(div_);
+                return flg = false
+            }
+            //显示加载中
+            var loding = document.getElementsByClassName('loding')[0];
+            if (!ul_) {
+                loding.style.display = 'block'
+            }
+            var ul_ = document.createElement('ul');
+            ul_.className = 'box'
+            for (var item of arr[index]) {
+                // console.log(item);
+                var li_ = document.createElement('li');
+                var img_ = document.createElement('img');
+                var p_ = document.createElement('p');
+                img_.className = 'pic'
+                img_.src = item.src;
+                p_.className = 'title'
+                p_.innerHTML = item.title;
+                li_.appendChild(img_);
+                li_.appendChild(p_);
+                ul_.appendChild(li_);
+            }
+            setTimeout(function () {
+                if (ul_) {
+                    loding.style.display = 'none'
+                }
+            }, 300)
+            body.appendChild(ul_);
+        }
+    }
+    window.onscroll = function () {
+        // 窗口高度
+        var winHeight = document.documentElement.clientHeight || document.body.clientHeight;
+        //滚动条的高度  滚动出页面的高度
+        var scroolTop = document.documentElement.scrollTop || document.body.scrollTop;
+        // console.log('滚动条：' + scroolTop);
+        //页面的整体高度
+        var scroolH = document.documentElement.scrollHeight || document.body.scrollHeight;
+        // console.log('整体高：' + scroolH);
+        if (winHeight + scroolTop >= scroolH) {
+            setTimeout(show, 500);
+        }
+    }
+</script>

@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.box {
+    width: 100%;
+    max-width: 640px;
+    min-width: 250px;
+    margin: 0 auto;
+    position: relative;
+
+    /*搜索框*/
+    .top {
+        width: 100%;
+        height: 18rem;
+        padding: .5rem 1rem;
+        background: url(../img/pic.jpg) no-repeat;
+        padding-left: 10rem;
+        background-size: auto;
+        display: flex;
+        align-content: flex-end;
+
+
+
+        .sk {
+            float: left;
+            width: 16rem;
+            height: 2rem;
+            border: 1px solid #666;
+            border-radius: 1rem;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+
+            span {
+                width: 12%;
+                height: 2rem;
+                float: left;
+                background-color: white;
+
+                &:nth-of-type(1) {
+
+                    background: url(../img/sprites.png)no-repeat 0.4rem 0.4rem;
+                    background-size: 12rem;
+                }
+
+                &:nth-of-type(2) {
+
+                    background: url(../img/sprites.png)no-repeat -9.6rem 0.3rem;
+                    background-size: 16rem;
+                }
+            }
+
+            input {
+                width: 75%;
+                height: 2rem;
+                float: right;
+                border: none;
+                font-size: 0.6rem;
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+        }
+
+        #dl {
+            color: rgb(163, 40, 40);
+            margin-left: 1%;
+            font-size: 1rem;
+            padding: 1%;
+            z-index: 999;
+
+        }
+    }
+}
+
+.content {
+    ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    li {
+        width: 25%;
+        height: 50%;
+        text-align: center;
+
+        img {
+            width: 50%;
+            height: 50%;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+}

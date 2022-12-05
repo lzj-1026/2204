@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    position: relative;
+    background-color: rgb(238, 238, 238);
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3rem;
+        text-align: center;
+        color: white;
+        background-color: red;
+
+        span {
+
+            &:nth-of-type(1) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 3rem;
+                height: 3rem;
+                font-size: 1.6rem;
+                background: url(../img/back.png) no-repeat center;
+                background-size: 100%;
+            }
+
+            &:nth-of-type(2) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    main {
+        padding-top: 3rem;
+
+        span {
+            display: block;
+            padding: 0 1rem;
+            width: 100%;
+            height: 3rem;
+            line-height: 3rem;
+            background-color: white;
+            border-bottom: 1px solid gray;
+        }
+
+        .kong {
+            border: 0;
+            margin-bottom: 1rem;
+        }
+    }
+
+    footer {
+        width: 100%;
+        height: 3rem;
+        line-height: 3rem;
+        margin: 2rem 0;
+        text-align: center;
+        background-color: white;
+
+        span {
+            color: red;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    var type = prompt('请输入加油的型号,92 或95') - 0;
+    var money = 0;
+    if (type == '92') {
+        alert('您选择的是92号汽油');
+        var sheng = prompt('请输入加油的数量');
+        if (sheng >= 20) {
+            money = sheng * 5.9;
+            alert('每升价格为5.9元' + '加油' + sheng + '价格为' + money + '元');
+        } else if (sheng < 20) {
+            money = sheng * 7;
+            alert('您加的是92号汽油' + '每升价格为7元' + '加油' + sheng + '价格为' + money + '元');
+        }
+        else {
+            alert('乱输入')
+        }
+    } else if (type == '95') {
+        var a = prompt('请输入加油数量')
+        if (a >= 20) {
+            money = a * 7;
+            alert('您加的是95号汽油' + '每升价格为7元' + '加油' + a + '价格为' + money + '元');
+        } else if (a > 0) {
+            money = a * 8;
+            alert('您加的是95号汽油' + '每升价格为8元' + '加油' + a + '价格为' + money + '元');
+        }
+    } else {
+        alert('乱输入，滚蛋')
+    }
+</script>

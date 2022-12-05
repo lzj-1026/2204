@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(248, 248, 248);
+}
+
+header {
+    box-sizing: border-box;
+    height: 3rem;
+    line-height: 3rem;
+    position: relative;
+    border-bottom: 0.1rem solid #ccc;
+
+    P {
+        text-indent: 2.5rem;
+        color: rgb(28, 130, 247);
+        font-size: 1.3rem;
+    }
+
+    .icon {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2.5rem;
+        height: 3rem;
+        background: url(../img/icon_back.png) no-repeat center;
+        background-size: 37%;
+    }
+}
+
+main {
+    width: 100%;
+
+    dl {
+        position: relative;
+        overflow: hidden;
+        background-color: rgb(255, 255, 255);
+
+        &:nth-of-type(1) {
+            border-bottom: 0.1rem solid #ccc;
+
+            .ab {
+                float: left;
+                width: 5.5rem;
+                height: 5.5rem;
+                background: url(../img/logo01.png) no-repeat center;
+                background-size: 80%;
+            }
+
+            dd {
+                float: left;
+                width: 40%;
+                margin-top: 1rem;
+
+                h3 {
+                    font-size: 1rem;
+                    color: #ccc;
+                }
+            }
+
+
+
+            .right {
+                float: right;
+                width: 6rem;
+                height: 6rem;
+
+                a {
+                    display: block;
+                    width: 5rem;
+                    height: 2.8rem;
+                    line-height: 2.8rem;
+                    text-align: center;
+                    border: #0078ff solid 1px;
+                    color: #0078ff;
+                    font-size: 0.8em;
+                    border-radius: 0.5rem;
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            width: 95%;
+            padding: 1rem 2.5%;
+            text-align: left;
+
+            dt {
+                height: 2rem;
+                line-height: 2rem;
+
+
+            }
+
+            dd {
+                font-size: 1.3rem;
+                color: gray;
+            }
+        }
+    }
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 4rem;
+    width: 100%;
+    overflow: hidden;
+    background-color: white;
+
+    a {
+        float: left;
+        width: 33.3%;
+        height: 1rem;
+        padding-top: 2rem;
+        text-align: center;
+        font-size: 1.2rem;
+
+        &:nth-of-type(1) {
+            background: url(../img/btn_01-1.png) no-repeat center;
+            background-size: 5%;
+            color: #0078ff;
+        }
+
+        &:nth-of-type(2) {
+            background: url(../img/btn_02.png) no-repeat center;
+            background-size: 5%;
+            color: gray;
+
+        }
+
+        &:nth-of-type(3) {
+            background: url(../img/btn_03.png) no-repeat center;
+            background-size: 5%;
+            color: gray;
+
+        }
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 900px;
+            height: 600px;
+            margin: 30px auto;
+            background-color: whitesmoke;
+        }
+
+        .box1 {
+            width: 100%;
+            height: 65px;
+        }
+
+        a {
+            width: 50%;
+            height: 65px;
+            text-align: center;
+            line-height: 65px;
+            text-decoration: none;
+            color: violet;
+            font-size: 20px;
+        }
+
+        a:nth-of-type(1) {
+            float: left;
+            /* font-size: 25px; */
+
+            background-color: #3bd22e;
+        }
+
+        a:nth-of-type(2) {
+            float: left;
+            /* font-size: 30px; */
+
+            background-color: #d41515;
+        }
+
+        .box2 {
+            width: 100%;
+            height: 500px;
+            margin-top: 30px;
+            background-color: yellow;
+        }
+
+        .son:nth-of-type(1) {
+            width: 100%;
+            height: 500px;
+            background-color: #3bd22e;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .son:nth-of-type(2) {
+            width: 100%;
+            height: 500px;
+            background-color: #d41515;
+            display: none;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .active {
+            font-size: 70px;
+            color: powderblue;
+            font-weight: 900;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <a href="#">大哥</a>
+            <a href="#">二弟</a>
+        </div>
+        <div class="box2">
+            <div class="son">老大老大</div>
+            <div class="son">老二老二</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var box = document.getElementsByTagName('a')
+    // console.log(box);
+
+    var son = document.getElementsByClassName('son')
+    // console.log(son);
+
+
+    for (i = 0; i < box.length; i++) {
+
+        box[i].setAttribute('sx', i);
+        // var sx = this.getAttribute('sx')
+        box[i].onclick = function () {
+            var sx = this.getAttribute('sx')
+            for (j = 0; j < box.length; j++) {
+                box[j].className = '';
+                box[sx].className = 'active'
+            }
+            for (k = 0; k < son.length; k++) {
+                son[k].style.display = 'none'
+                son[sx].style.display = 'block'
+            }
+        }
+    }
+</script>

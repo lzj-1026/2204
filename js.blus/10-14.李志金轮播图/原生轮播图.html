@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 550px;
+            height: 300px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .inner {
+            width: 100%;
+            height: 100%;
+            /* 超出部分隐藏 */
+            overflow: hidden;
+        }
+
+        .main {
+            width: 3000px;
+            height: 300px;
+        }
+
+        .main>img {
+            float: left;
+            width: 550px;
+            height: 300px;
+        }
+
+        /* 分页器 */
+
+        ul {
+            position: absolute;
+            bottom: 10px;
+        }
+
+        li {
+            width: 30px;
+            height: 8px;
+            list-style: none;
+            float: left;
+            margin-left: 70px;
+            background-color: rgb(54, 52, 52);
+        }
+
+        /* 选中的 */
+
+        .active {
+            background-color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="inner">
+            <div class="main">
+                <img src="./img/01.webp" alt="">
+                <img src="./img/02.webp" alt="">
+                <img src="./img/03.webp" alt="">
+                <img src="./img/04.webp" alt="">
+                <img src="./img/05.webp" alt="">
+            </div>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    //  1.获取页面元素
+    var imgs = document.getElementsByTagName('img');
+    var inner = document.getElementsByClassName('inner')[0];
+    var index = 0; //  其实图片的下标
+
+    // 获取li
+    var list = document.getElementsByTagName('li') //找到分页器
+
+
+    var timer = null; //计时器  指的是切换每一张图片
+    var timer2 = null; //计时器  指定是切换每一张图片  分的每一步的定时器
+    //2.轮播的函数
+    function autoMove() {
+        timer = setInterval(function () {
+            index++;
+            if (index >= imgs.length) {
+                index = 0;
+            }
+            // 动起来
+            var maxStep = 20; //最长步数
+            var start = inner.scrollLeft; //其实位置
+            var end = imgs[0].offsetWidth * index; //结束的位置
+            var everyStep = (end - start) / maxStep; //  每一步的步长
+            var step = 0; //其实的第一步
+
+
+            timer2 = setInterval(function () {
+                step++;
+                if (step >= maxStep) {
+                    step = 0;
+                    // step=0  说明图片已将走完了   需要清空一下
+                    clearInterval(timer2)
+                }
+                // 让图片动起来
+                start += everyStep;
+                inner.scrollLeft = start;
+            }, 50);
+            // 设置分页器的样式
+            // 循环所有的li   类名为空
+            for (var i in list) {
+                list[i].className = '';
+                list[i].onclick = function () {
+                    clearInterval(timer)
+                }
+                list[i].ondblclick = function () {
+                    autoMove()
+                }
+            }
+            list[index].className = 'active'
+
+            // 点击暂停
+            for (var j in imgs) {
+                imgs[j].onclick = function () {
+                    clearInterval(timer);
+                }
+
+                imgs[j].ondblclick = function () {
+                    autoMove();
+                }
+            }
+
+        }, 2000)
+    }
+    autoMove();
+
+</script>

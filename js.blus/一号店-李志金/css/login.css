@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a {
+    font-size: 12px;
+    /* color: rgb(153, 153, 153); */
+}
+
+a:hover {
+    color: red;
+}
+
+.box {
+    height: 90px;
+    border-bottom: 1px solid #e1e1e1;
+    box-shadow: 0px 0px 10px #ccc;
+    width: 100%;
+}
+
+.top {
+    padding: 15px;
+    width: 80%;
+    height: 120px;
+    margin: 0 auto;
+
+}
+
+.t_l {
+    float: left;
+}
+
+.t_y {
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+    letter-spacing: 1px;
+    color: rgb(153, 153, 153);
+    float: right;
+}
+
+.t_yy {
+    width: 120px;
+    height: 25px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 25px;
+    border: 1px solid #e1e1e1;
+    margin: 0 30px;
+    float: right;
+
+}
+
+.t_yy>span:nth-of-type(1) {
+    padding: 0 10px;
+    margin-right: 2px;
+    background: url(../img/runbun.png)no-repeat 1px 1px;
+}
+
+.t_yy>span:nth-of-type(2) {
+    padding: 0 10px;
+    margin-right: 2px;
+    background: url(../img/turnb.png)no-repeat 1px 1px;
+}
+
+/* 注册 */
+.main {
+    width: 100%;
+    /* height: 380px; */
+    /* background-color: yellow; */
+}
+
+.content {
+    width: 22%;
+    /* height: 380px; */
+    margin: 0 auto;
+    /* background-color: #e1e1e1; */
+}
+
+.content>h2 {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.content>div {
+    margin-bottom: 10px;
+}
+
+.c_a,
+.c_b,
+.c_c,
+.c_d {
+    border: 1px solid #dedede;
+}
+
+button,
+input {
+    width: 100%;
+    height: 50px;
+    text-indent: 10px;
+    border: 1px solid #dedede;
+}
+
+input:focus {
+    outline: none;
+}
+
+.c_b {
+    height: 50px;
+    width: 100%;
+}
+
+.c_b>input:nth-of-type(1) {
+    width: 55%;
+    float: left;
+}
+
+.c_b>input:nth-of-type(2) {
+    width: 35%;
+    float: right;
+    color: white;
+    font-weight: 900;
+    background-color: rgb(87, 86, 95);
+}
+
+.content>p {
+    padding-left: 10px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #888888;
+}
+
+.c_e>button {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    background-color: rgb(255, 60, 60);
+}
+
+.main>p {
+    padding: 0;
+    font-size: 12px;
+    text-align: center;
+}

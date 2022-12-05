@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+@media screen and (min-width: 1024px) {
+    .box {
+        width: 1024px;
+        background-color: red;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 20px 10px;
+
+        h2 {
+            overflow: hidden;
+            font-size: 20px;
+
+            span {
+                float: right;
+                font-size: 1rem;
+                color: #ccc;
+            }
+        }
+
+        ul {
+            width: 100%;
+            margin-top: 3%;
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                width: 23%;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+    .box {
+        width: 640px;
+        background-color: rgb(141, 171, 135);
+        margin: 0 auto;
+        margin-top: 15px;
+        padding: 15px 15px;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            overflow: hidden;
+            font-size: 15px;
+
+            span {
+                float: right;
+                font-size: 5px;
+                color: #ccc;
+            }
+        }
+
+        ul {
+            width: 100%;
+            margin-top: 3%;
+            display: flex;
+            flex-wrap: wrap;
+
+            li {
+                padding: 1%;
+                width: 50%;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 0.5rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 639px) {
+    .box {
+        width: 320px;
+        background-color: rgb(117, 105, 217);
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 20px 10px;
+
+        h2 {
+            overflow: hidden;
+            font-size: 0.5rem;
+
+            span {
+                float: right;
+                font-size: 0.3rem;
+                color: #ccc;
+            }
+        }
+
+        ul {
+            width: 100%;
+            margin-top: 3%;
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                width: 23%;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 0.2rem;
+                }
+            }
+        }
+    }
+}

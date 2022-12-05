@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+body header,
+html header {
+  flex: 1;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer span {
+  flex: 1;
+}
+footer span img {
+  width: 100%;
+}

@@ -1,0 +1,41 @@
+body {
+    background: url(../img/bg2.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(1) {
+    background: url(../img/g1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(2) {
+
+    background: url(../img/g3.jpg) no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.box1>a:nth-of-type(3) {
+    background: url(../img/g5.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(1):hover {
+    background: url(../img/g2.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(2):hover {
+    background: url(../img/g4.gif) no-repeat;
+    background-size: 100% 100%;
+}
+
+.box1>a:nth-of-type(3):hover {
+    background: url(../img/g6.gif)no-repeat;
+    background-size: 100% 100%;
+}
+
+p>a:nth-of-type(1) {
+    font-size: 20px;
+    color: pink;
+}

@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  margin-top: 1%;
+  margin: 0 auto;
+  min-width: 250px;
+  max-width: 600px;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.swiper {
+  width: 100%;
+  height: 10rem;
+  min-width: 250px;
+  max-width: 600px;
+}
+.swiper img {
+  width: 100%;
+  height: 100%;
+}
+.box {
+  width: 100%;
+  margin-top: 1%;
+  min-width: 250px;
+  max-width: 600px;
+}
+.box ul {
+  width: 100%;
+  height: 12rem;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  overflow: hidden;
+  margin-bottom: 1%;
+}
+.box ul li {
+  width: 33.3%;
+  text-align: center;
+  height: 6rem;
+  line-height: 6rem;
+  font-size: 1.6rem;
+  float: left;
+  color: white;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background: #ff697a;
+}
+.box ul li:nth-of-type(1) {
+  height: 12rem;
+  border-top-left-radius: 0.6rem;
+  border-bottom-left-radius: 0.6rem;
+}
+.box ul li:nth-of-type(1) span {
+  display: block;
+  width: 6rem;
+  height: 3rem;
+  margin-top: 10%;
+  margin-left: 25%;
+  background: url(../img/sprite.png) no-repeat 1.8rem -22.8rem;
+  background-size: 8rem;
+}
+.box ul li:nth-of-type(1) .bja {
+  background: url(../img/sprite.png) no-repeat 1.8rem -9.8rem;
+  background-size: 8rem;
+}
+.box ul li:nth-of-type(1) .bjb {
+  background: url(../img/sprite.png) no-repeat 1.8rem -18.4rem;
+  background-size: 8rem;
+}
+.box ul li:nth-of-type(3) {
+  border-top-right-radius: 0.6rem;
+}
+.box ul li:nth-of-type(5) {
+  border-bottom-right-radius: 0.6rem;
+}
+.box ul:nth-of-type(2) li {
+  background-color: #3d98ff;
+}
+.box ul:nth-of-type(3) li {
+  background-color: #44c522;
+}
+.box ul:nth-of-type(4) li {
+  height: 6rem;
+  background-color: #ff9f08;
+}
+.box ul:nth-of-type(5) {
+  height: 8rem;
+}
+.foot .ap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 6rem;
+  border-top: 1px solid #ded4d4;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+.foot .ap span {
+  float: left;
+  width: 33.3%;
+  padding-top: 3em;
+  height: 6em;
+  font-size: 1.2rem;
+  color: #ccc;
+  text-align: center;
+}
+.foot .ap a:nth-of-type(1) {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 12%;
+  top: 15%;
+  background: url(../img/sprite.png) no-repeat -4.2rem -11.8rem;
+  background-size: 9rem;
+}
+.foot .ap a:nth-of-type(2) {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  left: 48%;
+  top: 34%;
+  background: url(../img/sprite.png) no-repeat -5.2rem -14.8rem;
+  background-size: 9rem;
+}
+.foot .ap a:nth-of-type(3) {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 80%;
+  top: 15%;
+  background: url(../img/sprite.png) no-repeat -4.8rem -25.8rem;
+  background-size: 9rem;
+}
+.foot .ap a:nth-of-type(3):hover {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  left: 80%;
+  top: 29%;
+  background: url(../img/sprite.png) no-repeat -4.8rem -16.8rem;
+  background-size: 9rem;
+}
+.foot .sp_a {
+  overflow: hidden;
+}
+.foot .sp_a span {
+  margin-top: 1%;
+  height: 2rem;
+  line-height: 2rem;
+  float: left;
+  font-size: 1.2rem;
+  color: #3e3b3b;
+}
+.foot .sp_a span:nth-of-type(1) {
+  width: 40%;
+  text-align: right;
+}
+.foot .sp_a span:nth-of-type(2) {
+  width: 20%;
+  text-align: center;
+}
+.foot .sp_a span:nth-of-type(3) {
+  float: right;
+  width: 40%;
+  text-align: left;
+}
+.foot .sp_b {
+  overflow: hidden;
+}
+.foot .sp_b span {
+  float: left;
+  width: 50%;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1.2rem;
+  color: #877b7b;
+}
+.foot .sp_b span:nth-of-type(1) {
+  text-align: right;
+}
+.foot .sp_b span:nth-of-type(2) {
+  width: 49%;
+  padding-left: 1%;
+  text-align: left;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .e {
+            color: yellowgreen;
+        }
+
+        .a {
+            color: violet;
+        }
+    </style>
+</head>
+
+<body>
+    用户名：<input id="t1" type="text" value="hellow">
+    <span></span>
+
+</body>
+
+</html>
+<script>
+    var a_ = document.getElementById("t1")
+    var b_ = document.querySelector("span")
+
+    a_.onfocus = function () {
+        a_.style.color = "red"
+        a_.value = null
+        b_.innerHTML = "用户名6-12位"
+    }
+    a_.onblur = function () {
+        var val = a_.value;
+        if (val.length > 16 || val.length < 6) {
+            b_.innerHTML = '用户名输入不正确'
+            b_.className = 'e'
+        } else {
+
+            b_.innerHTML = "有效格式"
+            b_.className = 'a'
+        }
+
+    }
+</script>

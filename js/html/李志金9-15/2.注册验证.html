@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    用户名：<input type="text" id="ur">
+    <br>
+    密&nbsp;&nbsp;&nbsp;码：<input type="password" id="pa1">
+    <br>
+    重复密码：<input type="password" id="pa2">
+    <br>
+    <button onclick="user()">注册</button>
+</body>
+
+</html>
+<script>
+    function user() {
+        var a = document.getElementById('ur').value;
+
+        var b = document.getElementById('pa1').value;
+        var c = document.getElementById('pa2').value;
+        if (a.length == 0) {
+            alert('用户名不能为空，请重新输入')
+        } else if (b.length == 0 || c.length == 0) {
+            alert('密码或重复密码不能为空，请重新输入')
+        } else if (b.length < 6 || c.length < 6) {
+            alert('密码不能小于六位')
+        } else if (pa1.value == pa2.value) {
+            alert('注册成功');
+            a.value = '';
+            b.value = '';
+            c.value = '';
+        } else {
+            alert('两次密码不同，注册失败')
+        }
+    }
+</script>

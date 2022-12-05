@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // ['red', 'green', 'blue', 'pink'] 
+    // var arr = ['red', 'green', 'blue', 'pink'];
+    // arr_ = arr.reverse()
+    // console.log(arr_);
+
+    // 13. [13, 4, 77, 1, 7]数组排序，倒序排列
+    // var arr = [13, 4, 77, 1, 7]
+    // arr.sort(function (a, b) {
+    //     return b - a;
+    // })
+    // console.log(arr);
+
+    // ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b']去重并排序
+    var arr = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'b'];
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j]) {
+                arr.splice(j, 1);
+                j--;
+            }
+        }
+
+    }
+</script>

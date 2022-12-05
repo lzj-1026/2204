@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // var arr = [2, 4, 5, 6, 8, 9, 7, 4, 5, 56, 1, 745];
+    var arr = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+    var age;
+    var num = 0;
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    } console.log('数组的和为：' + sum);
+
+    age = sum / arr.length;
+    console.log('数组的平均值' + age);
+
+    arr.sort(function (a, b) {
+        return a - b
+    });
+
+    console.log('最小值：' + arr[0]);
+    console.log('最大值' + arr[arr.length - 1]);
+
+    // var arry = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+    // var sum = 0;//和
+
+    // for (var i = 0; i < arry.length; i++) {
+    //     sum += arry[i];
+    // }
+
+    // // 1.求和
+    // console.log('数组的和为：' + sum);//170
+
+    // // 2. 求平均数
+    // var avg = sum / arry.length;//平均数
+    // console.log('数组的平均数：' + avg); //17
+
+    // // 3.求最大值
+    // //   思路：利用数组排序  从大到小  然后取数组的下标为0 的值
+    // arry.sort(function (a, b) {
+    //     return b - a;
+    // })[0];
+
+    // var max = arry[0];//最大值
+
+    // console.log('最大值' + max);
+
+    // // 4.最小值  求数组的最后一个 即 数组.length - 1;
+    // var min = arry[arry.length - 1];
+    // console.log(min);//0
+</script>

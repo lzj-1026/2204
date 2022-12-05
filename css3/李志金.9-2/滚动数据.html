@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        body {
+            background: url(./img/bg.jpg) no-repeat;
+            background-size: 100%;
+
+        }
+
+        .box {
+            margin: 20px;
+
+
+            width: 400px;
+            height: 400px;
+            /* background-color: aqua; */
+            border: 30px solid;
+            border-image-source: url(./img/border.png);
+
+            /* border-image-slice: 35 38 25 25;
+            border-width: 35px 38px 25px 25px; */
+        }
+
+        .box1 {
+            width: 100%;
+            height: 40px;
+            background-color: rgb(57, 67, 97);
+        }
+
+        .box1>span {
+            display: inline-block;
+            padding-left: 20px;
+            line-height: 40px;
+            color: rgb(133, 213, 250);
+        }
+
+        .box2 {
+            width: 100%;
+            height: 290px;
+            margin-top: 10px;
+            padding-left: 20px;
+            color: rgb(66, 105, 176);
+            overflow: hidden;
+            font-size: 14px;
+        }
+
+        ul {
+            width: 100%;
+            height: 100%;
+            list-style: none;
+            animation: move 8s linear infinite;
+
+        }
+
+        ul>li {
+            height: 30px;
+            line-height: 30px;
+        }
+
+        ul:hover {
+            animation-play-state: paused;
+        }
+
+        ul>li:hover {
+            width: 100%;
+            background-color: rgb(133, 213, 250, .3);
+        }
+
+        @keyframes move {
+            0% {}
+
+            100% {
+                transform: translateY(-300px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1">
+            <span>故障时间</span>
+            <span>设备地址</span>
+            <span>异常代码</span>
+        </div>
+        <div class="box2">
+            <ul>
+                <li>河南省郑州市金水区CBD1楼</li>
+                <li>河南省郑州市金水区CBD2楼</li>
+                <li>河南省郑州市金水区CBD3楼</li>
+                <li>河南省郑州市金水区CBD4楼</li>
+                <li>河南省郑州市金水区CBD5楼</li>
+                <li>河南省郑州市金水区CBD6楼</li>
+                <li>河南省郑州市金水区CBD7楼</li>
+                <li>河南省郑州市金水区CBD8楼</li>
+                <li>河南省郑州市金水区CBD9楼</li>
+                <li>河南省郑州市金水区CBD10楼</li>
+                <li>河南省郑州市金水区CBD11楼</li>
+                <li>河南省郑州市金水区CBD12楼</li>
+                <li>河南省郑州市金水区CBD13楼</li>
+                <li>河南省郑州市金水区CBD14楼</li>
+                <li>河南省郑州市金水区CBD15楼</li>
+                <li>河南省郑州市金水区CBD16楼</li>
+                <li>河南省郑州市金水区CBD17楼</li>
+                <li>河南省郑州市金水区CBD18楼</li>
+                <li>河南省郑州市金水区CBD19楼</li>
+                <li>河南省郑州市金水区CBD20楼</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>
